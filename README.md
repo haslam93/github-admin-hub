@@ -1,4 +1,4 @@
-# 🛠️ GitHub Enterprise Admin Hub
+# 🛠️ Hammad's GitHub Enterprise Admin Hub
 
 **An interactive guide to GitHub Enterprise administration** — enterprise & org setup, enterprise teams, cost centers, budgets, **AI credit pooling**, Copilot seat management, AI policies, and the full billing/Copilot REST API surface.
 
