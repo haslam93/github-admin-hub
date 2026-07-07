@@ -1,0 +1,35 @@
+name: Weekly changelog watch
+
+on:
+  schedule:
+    # Every Monday at 06:00 UTC
+    - cron: "0 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch latest changelog entries
+        run: python scripts/update_changelog.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet; then
+            git add data/changelog.json README.md
+            git commit -m "chore: weekly changelog update ($(date -u +%F))"
+            git push
+          else
+            echo "No changelog changes this week."
+          fi

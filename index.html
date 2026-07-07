@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Enterprise Admin Hub — Cost Centers, AI Credits & Copilot Management</title>
+<script>
+  (() => {
+    const param = new URLSearchParams(window.location.search).get("clawpilotTheme");
+    const theme =
+      param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  })();
+</script>
+<style>
+:root {
+  color-scheme: light;
+  --cp-bg: #f7f4ef;
+  --cp-bg-elevated: #fcfbf8;
+  --cp-surface: #ffffff;
+  --cp-surface-soft: #f5f5f5;
+  --cp-border: #dedede;
+  --cp-border-strong: #919191;
+  --cp-text: #242424;
+  --cp-text-muted: #5c5c5c;
+  --cp-text-soft: #6f6f6f;
+  --cp-accent: #b11f4b;
+  --cp-accent-hover: #9a1a41;
+  --cp-accent-soft: rgba(177, 31, 75, 0.08);
+  --cp-accent-fg: #ffffff;
+  --cp-success: #16a34a;
+  --cp-danger: #dc2626;
+  --cp-warning: #f59e0b;
+  --cp-link: #0078d4;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.12);
+  --cp-overlay: rgba(255, 255, 255, 0.8);
+  --cp-panel: rgba(255, 255, 255, 0.86);
+  --cp-panel-strong: rgba(255, 255, 255, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.55);
+  --cp-highlight: rgba(177, 31, 75, 0.12);
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --cp-bg: #3d3b3a;
+  --cp-bg-elevated: #343231;
+  --cp-surface: #292929;
+  --cp-surface-soft: #2e2e2e;
+  --cp-border: #474747;
+  --cp-border-strong: #5f5f5f;
+  --cp-text: #dedede;
+  --cp-text-muted: #919191;
+  --cp-text-soft: #b0b0b0;
+  --cp-accent: #fd8ea1;
+  --cp-accent-hover: #fb7b91;
+  --cp-accent-soft: rgba(253, 142, 161, 0.14);
+  --cp-accent-fg: #1a1a1a;
+  --cp-success: #4ade80;
+  --cp-danger: #f87171;
+  --cp-warning: #fbbf24;
+  --cp-link: #4da6ff;
+  --cp-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
+  --cp-overlay: rgba(41, 41, 41, 0.88);
+  --cp-panel: rgba(41, 41, 41, 0.72);
+  --cp-panel-strong: rgba(41, 41, 41, 0.96);
+  --cp-sheen: rgba(255, 255, 255, 0.04);
+  --cp-highlight: rgba(253, 142, 161, 0.12);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Segoe UI", Aptos, Calibri, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--cp-bg);
+  color: var(--cp-text);
+  line-height: 1.55;
+}
+code, pre { font-family: Consolas, "Courier New", Courier, monospace; }
+a { color: var(--cp-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+header.topbar {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--cp-panel-strong);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--cp-border);
+  padding: 0.6rem 1.25rem;
+}
+.topbar-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.brand { font-weight: 700; font-size: 1.05rem; display: flex; align-items: center; gap: 0.5rem; white-space: nowrap; }
+.brand .logo { width: 26px; height: 26px; border-radius: 50%; background: var(--cp-accent); color: var(--cp-accent-fg); display: inline-flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 800; }
+nav.tabs { display: flex; gap: 0.25rem; flex-wrap: wrap; }
+nav.tabs button {
+  border: 1px solid transparent; background: transparent; color: var(--cp-text-muted);
+  padding: 0.4rem 0.7rem; border-radius: 0.625rem; cursor: pointer; font-size: 0.85rem;
+  font-family: inherit; font-weight: 600;
+}
+nav.tabs button:hover { background: var(--cp-accent-soft); color: var(--cp-text); }
+nav.tabs button.active { background: var(--cp-accent); color: var(--cp-accent-fg); }
+main { max-width: 1280px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
+section.tab-panel { display: none; }
+section.tab-panel.active { display: block; animation: fadein 0.25s ease; }
+@keyframes fadein { from { opacity: 0; transform: translateY(4px);} to { opacity: 1; transform: none;} }
+h1 { font-size: 1.7rem; margin-bottom: 0.5rem; }
+h2 { font-size: 1.3rem; margin: 1.75rem 0 0.75rem; }
+h3 { font-size: 1.05rem; margin: 1.25rem 0 0.5rem; }
+p.lead { color: var(--cp-text-muted); font-size: 1.02rem; max-width: 60rem; }
+.card {
+  background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 16px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 0 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14);
+}
+.grid { display: grid; gap: 0.9rem; margin: 1rem 0; }
+.grid.c2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid.c3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.grid.c4 { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.stat { text-align: center; }
+.stat .num { font-size: 1.7rem; font-weight: 800; color: var(--cp-accent); }
+.stat .lbl { font-size: 0.8rem; color: var(--cp-text-muted); }
+.badge {
+  display: inline-block; padding: 0.1rem 0.55rem; border-radius: 999px; font-size: 0.72rem;
+  font-weight: 700; background: var(--cp-accent-soft); color: var(--cp-accent);
+  border: 1px solid var(--cp-border); vertical-align: middle;
+}
+.badge.ga { background: rgba(22,163,74,0.12); color: var(--cp-success); }
+.badge.preview { background: rgba(245,158,11,0.12); color: var(--cp-warning); }
+.badge.api { background: var(--cp-surface-soft); color: var(--cp-text-muted); }
+.badge.new { background: var(--cp-highlight); color: var(--cp-accent); }
+table.tbl { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 0.6rem 0 1rem; background: var(--cp-surface); border-radius: 0.625rem; overflow: hidden; }
+table.tbl th, table.tbl td { text-align: left; padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--cp-border); vertical-align: top; }
+table.tbl th { background: var(--cp-surface-soft); color: var(--cp-text-muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.03em; }
+table.tbl tr:last-child td { border-bottom: none; }
+table.tbl code { background: var(--cp-surface-soft); padding: 0.05rem 0.3rem; border-radius: 4px; font-size: 0.82rem; }
+.callout { border-left: 4px solid var(--cp-accent); background: var(--cp-accent-soft); padding: 0.7rem 1rem; border-radius: 0 0.625rem 0.625rem 0; margin: 0.9rem 0; font-size: 0.92rem; }
+.callout.warn { border-left-color: var(--cp-warning); background: rgba(245,158,11,0.08); }
+.callout.ok { border-left-color: var(--cp-success); background: rgba(22,163,74,0.08); }
+pre.code {
+  background: var(--cp-surface); border: 1px solid var(--cp-border); border-radius: 0.625rem;
+  padding: 0.8rem 1rem; overflow-x: auto; font-size: 0.8rem; line-height: 1.5; margin: 0.6rem 0;
+}
+/* diagrams */
+.diagram { background: var(--cp-bg-elevated); border: 1px dashed var(--cp-border-strong); border-radius: 16px; padding: 1.25rem; margin: 1rem 0; overflow-x: auto; }
+.diagram .dg-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--cp-text-soft); margin-bottom: 0.8rem; font-weight: 700; }
+.node {
+  background: var(--cp-surface); border: 1.5px solid var(--cp-border-strong); border-radius: 0.625rem;
+  padding: 0.45rem 0.8rem; font-size: 0.82rem; font-weight: 600; text-align: center;
+  box-shadow: 0 0 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14);
+}
+.node.accent { border-color: var(--cp-accent); background: var(--cp-accent-soft); color: var(--cp-accent); }
+.node.soft { border-style: dashed; color: var(--cp-text-muted); font-weight: 500; }
+.node small { display: block; font-weight: 400; color: var(--cp-text-soft); font-size: 0.72rem; }
+.flow { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin: 0.5rem 0; }
+.flow .arrow { color: var(--cp-text-soft); font-size: 1.1rem; font-weight: 700; }
+.tree { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
+.tree .lvl { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+.tree .connector { width: 2px; height: 16px; background: var(--cp-border-strong); }
+/* scenario lab */
+.lab-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.8rem; align-items: end; }
+.lab-controls label { font-size: 0.75rem; font-weight: 700; color: var(--cp-text-muted); display: block; margin-bottom: 0.2rem; }
+input[type=number], input[type=text], select {
+  width: 100%; padding: 0.45rem 0.6rem; border: 1px solid var(--cp-border); border-radius: 0.625rem;
+  background: var(--cp-surface); color: var(--cp-text); font-family: inherit; font-size: 0.9rem;
+}
+input[type=range] { width: 100%; accent-color: var(--cp-accent); }
+.btn {
+  display: inline-block; border: 1px solid var(--cp-border); background: var(--cp-surface); color: var(--cp-text);
+  padding: 0.45rem 0.9rem; border-radius: 0.625rem; cursor: pointer; font-family: inherit; font-weight: 600; font-size: 0.85rem;
+}
+.btn:hover { background: var(--cp-surface-soft); }
+.btn.primary { background: var(--cp-accent); border-color: var(--cp-accent); color: var(--cp-accent-fg); }
+.btn.primary:hover { background: var(--cp-accent-hover); }
+.btn.small { padding: 0.25rem 0.6rem; font-size: 0.75rem; }
+.cc-card { border: 1px solid var(--cp-border); border-radius: 0.625rem; padding: 0.8rem; margin: 0.6rem 0; background: var(--cp-surface); }
+.usagebar { height: 22px; border-radius: 6px; background: var(--cp-surface-soft); overflow: hidden; display: flex; margin: 0.35rem 0; border: 1px solid var(--cp-border); }
+.usagebar .seg { height: 100%; }
+.seg.included { background: var(--cp-success); }
+.seg.metered { background: var(--cp-warning); }
+.seg.blocked { background: var(--cp-danger); }
+.legend { display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.78rem; color: var(--cp-text-muted); margin: 0.5rem 0; }
+.legend .sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 4px; vertical-align: -1px; }
+/* api explorer */
+.api-item { border: 1px solid var(--cp-border); border-radius: 0.625rem; margin: 0.45rem 0; background: var(--cp-surface); overflow: hidden; }
+.api-head { display: flex; align-items: center; gap: 0.6rem; padding: 0.55rem 0.8rem; cursor: pointer; flex-wrap: wrap; }
+.api-head:hover { background: var(--cp-surface-soft); }
+.method { font-family: Consolas, "Courier New", monospace; font-weight: 800; font-size: 0.72rem; padding: 0.1rem 0.45rem; border-radius: 5px; min-width: 52px; text-align: center; }
+.method.GET { background: rgba(22,163,74,0.14); color: var(--cp-success); }
+.method.POST { background: rgba(0,120,212,0.14); color: var(--cp-link); }
+.method.PATCH, .method.PUT { background: rgba(245,158,11,0.14); color: var(--cp-warning); }
+.method.DELETE { background: rgba(220,38,38,0.14); color: var(--cp-danger); }
+.api-path { font-family: Consolas, "Courier New", monospace; font-size: 0.8rem; word-break: break-all; }
+.api-body { display: none; padding: 0.7rem 0.9rem; border-top: 1px solid var(--cp-border); font-size: 0.86rem; }
+.api-item.open .api-body { display: block; }
+.alert-badges span { margin-right: 0.35rem; }
+footer { border-top: 1px solid var(--cp-border); margin-top: 3rem; padding: 1.2rem; text-align: center; color: var(--cp-text-soft); font-size: 0.8rem; }
+.src { font-size: 0.75rem; color: var(--cp-text-soft); margin-top: 0.4rem; }
+details.model-prices summary { cursor: pointer; font-weight: 600; color: var(--cp-accent); margin: 0.5rem 0; }
+@media (max-width: 720px) { h1 { font-size: 1.35rem; } main { padding: 1rem 0.8rem 3rem; } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand"><span class="logo">GA</span> GitHub Enterprise Admin Hub</div>
+    <nav class="tabs" id="tabs">
+      <button data-tab="overview" class="active">Overview</button>
+      <button data-tab="structure">Enterprise &amp; Orgs</button>
+      <button data-tab="teams">Enterprise Teams</button>
+      <button data-tab="costcenters">Cost Centers &amp; Budgets</button>
+      <button data-tab="aicredits">AI Credits</button>
+      <button data-tab="copilot">Copilot Seats</button>
+      <button data-tab="policies">Policies</button>
+      <button data-tab="lab">Scenario Lab</button>
+      <button data-tab="api">API Explorer</button>
+      <button data-tab="changelog">Changelog</button>
+    </nav>
+  </div>
+</header>
+<main>
+
+<!-- ================= OVERVIEW ================= -->
+<section class="tab-panel active" id="panel-overview">
+  <h1>GitHub Enterprise administration, demystified</h1>
+  <p class="lead">One interactive place to understand how <strong>enterprise accounts, organizations, enterprise teams, cost centers, budgets, AI credits, and Copilot licensing</strong> fit together — with live scenario simulation and a full REST API reference. Content is verified against GitHub Docs and the GitHub Changelog (July 2026) and auto-refreshed weekly.</p>
+
+  <div class="grid c4">
+    <div class="card stat"><div class="num">500</div><div class="lbl">max active cost centers per enterprise</div></div>
+    <div class="card stat"><div class="num">1¢</div><div class="lbl">1 AI credit = $0.01 USD</div></div>
+    <div class="card stat"><div class="num">1,900 / 3,900</div><div class="lbl">included AI credits per user/month (Business / Enterprise)</div></div>
+    <div class="card stat"><div class="num">75 · 90 · 100%</div><div class="lbl">budget alert thresholds</div></div>
+  </div>
+
+  <h2>The big picture</h2>
+  <div class="diagram">
+    <div class="dg-title">Enterprise hierarchy + billing overlay</div>
+    <div class="tree">
+      <div class="lvl"><div class="node accent">Enterprise Account<small>policies · billing · licensing · AI Controls</small></div></div>
+      <div class="connector"></div>
+      <div class="lvl">
+        <div class="node">Organization A<small>repos · org teams · members</small></div>
+        <div class="node">Organization B<small>repos · org teams · members</small></div>
+        <div class="node soft">Enterprise Teams<small>cross-org groups (GA Jun 2026)</small></div>
+        <div class="node soft">Unaffiliated Users<small>no org needed — can still get Copilot</small></div>
+      </div>
+      <div class="connector"></div>
+      <div class="lvl">
+        <div class="node">Repositories</div>
+        <div class="node">Org Teams</div>
+        <div class="node">Members</div>
+      </div>
+      <div class="connector"></div>
+      <div class="lvl">
+        <div class="node accent">Cost Centers<small>attribute usage: users · orgs · repos · enterprise teams</small></div>
+        <div class="node accent">Budgets<small>control spend: enterprise · org · repo · cost center · user</small></div>
+        <div class="node accent">AI Credit Pools<small>cap included usage per cost center (Jul 2026)</small></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Three pillars of spend governance</h2>
+  <div class="grid c3">
+    <div class="card">
+      <h3>1 · Attribution — Cost Centers</h3>
+      <p>Answer <em>"who spent this?"</em> Assign users, orgs, repos, and enterprise teams to cost centers. Usage rolls up automatically for chargeback and forecasting. Cost centers <strong>never stop</strong> spending by themselves.</p>
+    </div>
+    <div class="card">
+      <h3>2 · Control — Budgets</h3>
+      <p>Answer <em>"how much may they spend?"</em> Dollar limits on metered products at enterprise, org, repo, cost center, or per-user scope — with alerts at 75/90/100% and an optional hard stop.</p>
+    </div>
+    <div class="card">
+      <h3>3 · Caps — AI Credit Pools <span class="badge new">NEW · Jul 2, 2026</span></h3>
+      <p>Answer <em>"how much of the shared included pool may they draw?"</em> Cap a cost center's included AI credit consumption to exactly what its own Copilot licenses fund. Auto-calculated, API-managed.</p>
+    </div>
+  </div>
+
+  <div class="callout">💡 <strong>Try it live:</strong> jump into the <a href="#" onclick="showTab('lab');return false;">Scenario Lab</a> to build an enterprise, assign licenses to cost centers, toggle AI credit pool caps, and watch what happens when teams burn through credits.</div>
+
+  <h2>What changed recently?</h2>
+  <table class="tbl">
+    <tr><th>Date</th><th>Change</th><th>Status</th></tr>
+    <tr><td>2026-07-02</td><td><strong>Cost centers support AI credit pools</strong> — cap included AI credit draw per cost center (REST API; UI coming soon)</td><td><span class="badge ga">GA (API)</span></td></tr>
+    <tr><td>2026-06-30</td><td>Per-user AI credit budgets for cost centers (user-level budgets scoped to a cost center)</td><td><span class="badge ga">GA (API)</span></td></tr>
+    <tr><td>2026-06-22</td><td>Enterprise teams can be assigned to cost centers (SCIM-synced attribution)</td><td><span class="badge ga">GA</span></td></tr>
+    <tr><td>2026-06-04</td><td>Enterprise Teams generally available · Budget &amp; usage management APIs GA</td><td><span class="badge ga">GA</span></td></tr>
+    <tr><td>2026-02-26</td><td>Enterprise AI Controls &amp; Agent Control Plane GA — "AI Controls" tab is the permanent policy home</td><td><span class="badge ga">GA</span></td></tr>
+    <tr><td>2025-10-28</td><td>Copilot Business management at the enterprise level GA (assign to users/enterprise teams, no org needed)</td><td><span class="badge ga">GA</span></td></tr>
+  </table>
+  <p class="src">Full history in the <a href="#" onclick="showTab('changelog');return false;">Changelog tab</a> — auto-updated weekly by a GitHub Actions workflow.</p>
+</section>
+
+<!-- ================= STRUCTURE ================= -->
+<section class="tab-panel" id="panel-structure">
+  <h1>Enterprise &amp; organization setup</h1>
+  <p class="lead">The enterprise account is the top-level container for policy, billing, and identity. Organizations own the code. Understanding the roles at each level is the foundation of everything else.</p>
+
+  <h2>Classic enterprise vs Enterprise Managed Users (EMU)</h2>
+  <div class="grid c2">
+    <div class="card">
+      <h3>Classic (personal accounts)</h3>
+      <ul>
+        <li>Users bring their own github.com accounts</li>
+        <li>SAML SSO supported (enterprise or per-org)</li>
+        <li>Team sync only via Entra ID or Okta (org teams)</li>
+        <li>❌ No IdP sync for <em>enterprise</em> teams</li>
+        <li>❌ No guest collaborator role</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>EMU (managed accounts)</h3>
+      <ul>
+        <li>Accounts provisioned from IdP (Entra ID, Okta, PingFederate) via SCIM</li>
+        <li>Users can't change username/profile; no public content</li>
+        <li>✅ Enterprise team ↔ IdP group sync via SCIM</li>
+        <li>✅ Guest collaborator role available</li>
+        <li>Org/team membership fully IdP-driven</li>
+      </ul>
+    </div>
+  </div>
+  <table class="tbl">
+    <tr><th>Partner IdP</th><th>SAML</th><th>OIDC</th><th>SCIM</th></tr>
+    <tr><td>Microsoft Entra ID</td><td>✅</td><td>✅</td><td>✅</td></tr>
+    <tr><td>Okta</td><td>✅</td><td>❌</td><td>✅</td></tr>
+    <tr><td>PingFederate</td><td>✅</td><td>❌</td><td>✅</td></tr>
+  </table>
+
+  <h2>Enterprise roles</h2>
+  <table class="tbl">
+    <tr><th>Role</th><th>What they can do</th><th>Notes</th></tr>
+    <tr><td><strong>Enterprise owner</strong></td><td>Full control of settings, members, policies, billing</td><td>No org access by default — must join each org</td></tr>
+    <tr><td><strong>Billing manager</strong></td><td>Billing settings, licenses, usage-based billing, cost centers &amp; budgets</td><td>Cannot assign enterprise teams to cost centers (owners only)</td></tr>
+    <tr><td><strong>App manager</strong></td><td>Manage enterprise-owned GitHub App registrations</td><td>Cannot install/uninstall apps on orgs</td></tr>
+    <tr><td><strong>Security manager</strong> <span class="badge preview">Preview</span></td><td>View/manage security alerts enterprise-wide</td><td></td></tr>
+    <tr><td><strong>Member</strong></td><td>Default role; internal-repo visibility across orgs</td><td></td></tr>
+    <tr><td><strong>Unaffiliated user</strong></td><td>In the enterprise but no org</td><td>Can still receive Copilot Business, enterprise team membership &amp; custom roles</td></tr>
+    <tr><td><strong>Guest collaborator</strong></td><td>Limited internal-repo visibility</td><td>EMU only</td></tr>
+    <tr><td><strong>Custom roles</strong></td><td>Delegated slices of enterprise admin (e.g., "AI manager")</td><td>Defined by enterprise owners</td></tr>
+  </table>
+
+  <h2>Organization roles</h2>
+  <table class="tbl">
+    <tr><th>Role</th><th>Scope</th></tr>
+    <tr><td><strong>Owner</strong></td><td>Complete admin access to the org</td></tr>
+    <tr><td><strong>Member</strong></td><td>Default; can create repos and projects</td></tr>
+    <tr><td><strong>Billing manager</strong></td><td>Org billing settings only</td></tr>
+    <tr><td><strong>Security manager</strong></td><td>Security alerts/settings on all repos + read access</td></tr>
+    <tr><td><strong>Moderator</strong></td><td>Block users, interaction limits, hide comments</td></tr>
+    <tr><td><strong>GitHub App manager</strong></td><td>Org-owned GitHub App registrations</td></tr>
+    <tr><td><strong>Outside / repository collaborator</strong></td><td>Per-repo access without membership (EMU: "repository collaborator")</td></tr>
+    <tr><td><strong>Custom org roles</strong></td><td>Granular permission sets (e.g., audit-log-only)</td></tr>
+  </table>
+
+  <h2>Adding organizations to an enterprise</h2>
+  <div class="diagram">
+    <div class="dg-title">Three paths</div>
+    <div class="flow"><div class="node accent">Create new org</div><span class="arrow">→</span><div class="node">Enterprise owner becomes org owner automatically</div></div>
+    <div class="flow"><div class="node accent">Invite existing org</div><span class="arrow">→</span><div class="node">Org owner approves</div><span class="arrow">→</span><div class="node">Enterprise owner approves</div></div>
+    <div class="flow"><div class="node accent">Transfer between enterprises</div><span class="arrow">→</span><div class="node">Must be owner of both enterprises</div></div>
+  </div>
+  <div class="callout warn">⚠️ When an existing org joins: enterprise SAML overrides org SAML, enterprise policies apply immediately, and users without compliant 2FA lose access. EMU enterprises <strong>cannot</strong> import existing organizations.</div>
+
+  <h2>Policy inheritance model</h2>
+  <div class="diagram">
+    <div class="dg-title">Every enterprise policy picks one mode</div>
+    <div class="flow">
+      <div class="node">Enforce<small>orgs cannot override</small></div>
+      <div class="node">No policy / delegate<small>each org owner decides</small></div>
+      <div class="node">Disable<small>blocked enterprise-wide</small></div>
+    </div>
+    <div class="flow" style="margin-top:0.6rem;">
+      <div class="node soft">Special: Copilot cloud agent → enterprise picks the exact orgs that get access</div>
+      <div class="node soft">Special: enterprise-assigned Copilot users → covered by "Policies for enterprise-assigned users"</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ENTERPRISE TEAMS ================= -->
+<section class="tab-panel" id="panel-teams">
+  <h1>Enterprise Teams <span class="badge ga">GA · Jun 4, 2026</span></h1>
+  <p class="lead">Teams that live at the <strong>enterprise level</strong> and span organizations. They are the connective tissue between identity (IdP groups), Copilot licensing, org membership, and cost attribution.</p>
+
+  <div class="diagram">
+    <div class="dg-title">One enterprise team, many uses</div>
+    <div class="tree">
+      <div class="lvl"><div class="node accent">Enterprise Team @/ent:platform-sre<small>synced to IdP group via SCIM (EMU)</small></div></div>
+      <div class="connector"></div>
+      <div class="lvl">
+        <div class="node">Copilot Business licenses<small>auto grant/revoke with membership</small></div>
+        <div class="node">Org membership<small>added to selected orgs, no invitations</small></div>
+        <div class="node">Cost center assignment<small>usage attribution follows the team</small></div>
+        <div class="node">Enterprise roles<small>predefined or custom</small></div>
+        <div class="node">Ruleset bypass<small>bypass actors on repo rulesets</small></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Timeline</h2>
+  <div class="flow">
+    <div class="node">Sep 4, 2025<small>Public preview</small></div><span class="arrow">→</span>
+    <div class="node">Jun 4, 2026<small>Generally available</small></div><span class="arrow">→</span>
+    <div class="node accent">Jun 22, 2026<small>Assignable to cost centers</small></div>
+  </div>
+
+  <div class="grid c2">
+    <div class="card">
+      <h3>✅ Can do</h3>
+      <ul>
+        <li>Receive Copilot Business licenses from the enterprise</li>
+        <li>Hold predefined/custom enterprise roles</li>
+        <li>Be added to organizations (members join without invites)</li>
+        <li>Bypass access on repository rulesets</li>
+        <li>@mention (<code>@/ent:team-slug</code>), assign, request review on PRs</li>
+        <li>IdP group sync via SCIM (EMU)</li>
+        <li>GitHub Apps &amp; fine-grained PATs via "enterprise teams" permission</li>
+        <li>Full audit-log coverage</li>
+        <li>Belong to a cost center (usage attribution)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>❌ Cannot do (yet)</h3>
+      <ul>
+        <li>IdP sync in classic (personal-account) enterprises</li>
+        <li>CODEOWNERS entries</li>
+        <li>Secret visibility</li>
+        <li>Nested (parent/child) teams</li>
+        <li>Team maintainer role</li>
+        <li>Project board access</li>
+      </ul>
+      <h3>Limits</h3>
+      <ul>
+        <li>2,500 teams per enterprise</li>
+        <li>5,000 members per team</li>
+        <li>1,000 organizations per team</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Key REST endpoints</h2>
+  <table class="tbl">
+    <tr><th>Action</th><th>Endpoint</th></tr>
+    <tr><td>List / create teams</td><td><code>GET/POST /enterprises/{enterprise}/teams</code></td></tr>
+    <tr><td>Get / update / delete</td><td><code>GET/PATCH/DELETE /enterprises/{enterprise}/teams/{team_slug}</code></td></tr>
+    <tr><td>Bulk membership</td><td><code>POST …/teams/{team}/memberships/add</code> · <code>…/remove</code></td></tr>
+    <tr><td>Single member</td><td><code>PUT/DELETE …/teams/{team}/memberships/{username}</code></td></tr>
+    <tr><td>Org assignment</td><td><code>POST …/teams/{team}/organizations/add</code> · <code>PUT/DELETE …/organizations/{org}</code></td></tr>
+  </table>
+  <p class="src">Auth: classic PAT — <code>read:enterprise</code> (read) / <code>admin:enterprise</code> (write). Full details in the <a href="#" onclick="showTab('api');return false;">API Explorer</a>.</p>
+</section>
+
+<!-- ================= COST CENTERS & BUDGETS ================= -->
+<section class="tab-panel" id="panel-costcenters">
+  <h1>Cost centers &amp; budgets</h1>
+  <p class="lead"><strong>Cost centers attribute</strong> usage to business units. <strong>Budgets control</strong> how much gets spent. They are separate, complementary tools — most enterprises need both.</p>
+
+  <h2>Cost centers — attribution</h2>
+  <div class="grid c2">
+    <div class="card">
+      <h3>Who can manage them</h3>
+      <ul>
+        <li><strong>Enterprise owners &amp; billing managers</strong> — any resource in the enterprise</li>
+        <li><strong>Org owners</strong> — cost centers containing only their org's resources</li>
+        <li><strong>Enterprise teams → cost centers:</strong> enterprise owners only</li>
+      </ul>
+      <h3>What goes in one</h3>
+      <ul>
+        <li>👤 Users (direct)</li>
+        <li>🏢 Organizations</li>
+        <li>📁 Repositories</li>
+        <li>👥 Enterprise teams <span class="badge new">Jun 2026</span> (SCIM-synced)</li>
+      </ul>
+      <p>A resource belongs to <strong>one cost center at a time</strong> — adding it elsewhere moves it.</p>
+    </div>
+    <div class="card">
+      <h3>Limits &amp; facts</h3>
+      <ul>
+        <li>Max <strong>500 active cost centers</strong> per enterprise</li>
+        <li>Max <strong>25,000 resources</strong> per cost center</li>
+        <li>Max <strong>50 resources</strong> per API call</li>
+        <li>Outside collaborators / unaffiliated users: API-only assignment</li>
+        <li>Each cost center can bill to a <strong>different Azure subscription</strong> (UI-only setup)</li>
+        <li>Deleting = archiving — still queryable with <code>?state=deleted</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>How usage is attributed</h2>
+  <div class="diagram">
+    <div class="dg-title">Attribution priority for license/user-based products (Copilot, AI credits, GHAS, GHE licenses)</div>
+    <div class="flow">
+      <div class="node accent">1 · Direct user assignment<small>always wins</small></div><span class="arrow">→</span>
+      <div class="node">2 · Enterprise team membership<small>earliest-created team wins on conflict</small></div><span class="arrow">→</span>
+      <div class="node">3 · Organization membership<small>cost center containing the org</small></div><span class="arrow">→</span>
+      <div class="node soft">Unattributed<small>rolls up to enterprise</small></div>
+    </div>
+  </div>
+  <table class="tbl">
+    <tr><th>Product</th><th>Charged to the cost center containing…</th></tr>
+    <tr><td>GitHub Actions</td><td>the repository or organization where the workflow runs</td></tr>
+    <tr><td>Codespaces</td><td>the repository or organization where it's created</td></tr>
+    <tr><td>Copilot license</td><td>the user (priority) → the org paying for the license</td></tr>
+    <tr><td>AI credits / Copilot cloud agent</td><td>the user who triggered usage (priority) → org that granted the license</td></tr>
+    <tr><td>GitHub Enterprise license</td><td>the user (priority) → oldest org the user belongs to</td></tr>
+    <tr><td>Advanced Security</td><td>the user (priority) → org billed for the license</td></tr>
+    <tr><td>Git LFS / Packages</td><td>the repository or organization owning the resource</td></tr>
+  </table>
+
+  <h2>Budgets — control</h2>
+  <div class="grid c3">
+    <div class="card"><h3>Product budgets</h3><p><code>ProductPricing</code> — an entire product: all of Actions, all of Packages, Codespaces…</p></div>
+    <div class="card"><h3>SKU budgets</h3><p><code>SkuPricing</code> — one SKU: <code>actions_linux_96_core</code>, <code>secret_protection</code>, <code>code_security</code>…</p></div>
+    <div class="card"><h3>Bundled AI credits</h3><p><code>BundlePricing</code> + <code>ai_credits</code> — everything that consumes AI credits: Copilot, cloud agent, Spark.</p></div>
+  </div>
+
+  <table class="tbl">
+    <tr><th>Budget scope</th><th>Caps</th><th>Notes</th></tr>
+    <tr><td><strong>Enterprise</strong></td><td>All metered charges enterprise-wide</td><td>Not a total bill cap — licenses are separate</td></tr>
+    <tr><td><strong>Organization</strong></td><td>One org's metered charges</td><td></td></tr>
+    <tr><td><strong>Repository</strong></td><td>One repo's metered charges</td><td></td></tr>
+    <tr><td><strong>Cost center</strong></td><td>All metered charges attributed to the cost center</td><td>Pairs with AI credit pools</td></tr>
+    <tr><td><strong>User — universal</strong></td><td>AI credits per licensed user (all users)</td><td>Always a hard stop</td></tr>
+    <tr><td><strong>User — cost center</strong> <span class="badge new">Jun 30, 2026</span></td><td>Per-user cap for everyone in a cost center</td><td>Overrides universal; API-only</td></tr>
+    <tr><td><strong>User — individual</strong></td><td>One specific user</td><td>Overrides both; $0 = immediate block</td></tr>
+  </table>
+
+  <div class="callout warn">⚠️ <strong>"Stop usage when limit reached"</strong> is OFF by default — a budget only alerts unless you enable the hard stop. It's unavailable for license-based products (seats). For GHAS SKUs it limits <em>new</em> repo enablement only. User-level budgets are <em>always</em> hard stops.</div>
+  <div class="callout ok">✅ Alerts fire at <strong>75%, 90%, and 100%</strong> (email + banner) to owners/billing managers plus configured recipients. Separate included-usage alerts at 90%/100% exist for Actions minutes, storage, Packages, LFS, Codespaces.</div>
+
+  <h3>Budget mechanics worth remembering</h3>
+  <ul>
+    <li>Max 10,000 budgets per account; amounts in whole dollars</li>
+    <li>Budgets apply from creation date — never retroactive (first cycle can overshoot)</li>
+    <li>Scope can't be changed after creation — delete and recreate</li>
+    <li><strong>Lowest remaining headroom wins:</strong> whichever applicable budget has the least capacity left blocks first</li>
+    <li>Cost center exclusion lets a team's metered charges bypass the enterprise budget</li>
+  </ul>
+
+  <h2>Cost center vs budget vs AI credit pool</h2>
+  <table class="tbl">
+    <tr><th>Control</th><th>Question it answers</th><th>Phase</th><th>Stops spend?</th></tr>
+    <tr><td><strong>Cost center</strong></td><td>Who is responsible for this usage?</td><td>Always (attribution)</td><td>❌ Never</td></tr>
+    <tr><td><strong>AI credit pool</strong></td><td>How much included AI credit may this cost center draw?</td><td>Pool phase (before metered)</td><td>✅ Optional block or roll to paid</td></tr>
+    <tr><td><strong>Budget</strong></td><td>How many dollars of metered usage are allowed?</td><td>Metered phase (after pool)</td><td>✅ If "stop usage" enabled</td></tr>
+  </table>
+</section>
+
+<!-- ================= AI CREDITS ================= -->
+<section class="tab-panel" id="panel-aicredits">
+  <h1>AI credits &amp; included usage caps</h1>
+  <p class="lead">Copilot usage-based billing moved from per-request "premium request" multipliers to <strong>token-based AI credits</strong>. Existing premium-request budgets were converted automatically. <strong>1 AI credit = $0.01 USD.</strong></p>
+
+  <h2>Included credits per plan</h2>
+  <table class="tbl">
+    <tr><th>Plan</th><th>Price</th><th>Standard included AI credits / user / month</th><th>Promo (Jun 1 – Sep 1, 2026)</th></tr>
+    <tr><td><strong>Copilot Business</strong></td><td>$19 / user / mo</td><td><strong>1,900</strong></td><td>3,000</td></tr>
+    <tr><td><strong>Copilot Enterprise</strong></td><td>$39 / user / mo</td><td><strong>3,900</strong></td><td>7,000</td></tr>
+  </table>
+  <div class="callout">🏊 Included credits <strong>pool enterprise-wide</strong> per billing cycle — heavy users draw more, light users offset them. That's powerful, but it means one team can silently consume credits another team's licenses paid for. Enter AI credit pools…</div>
+
+  <h2>AI credit pools for cost centers <span class="badge new">Jul 2, 2026</span></h2>
+  <div class="diagram">
+    <div class="dg-title">Without vs with an AI credit pool cap</div>
+    <div class="flow">
+      <div class="node">Without cap<small>cost center draws freely from the shared enterprise pool</small></div>
+      <span class="arrow">vs</span>
+      <div class="node accent">With cap (ai_credit_pool_enabled)<small>draw limited to credits funded by the cost center's own licenses</small></div>
+    </div>
+    <div class="flow" style="margin-top:0.7rem;">
+      <div class="node soft">Pool limit is auto-calculated from assigned Business/Enterprise licenses — you never maintain the number</div>
+    </div>
+  </div>
+  <div class="grid c2">
+    <div class="card">
+      <h3>How it works</h3>
+      <ul>
+        <li>Toggle <code>ai_credit_pool_enabled: true</code> on create/edit (REST API today; UI coming)</li>
+        <li>Cost center must contain <strong>users or enterprise teams</strong> (not just orgs/repos)</li>
+        <li>Limit auto-adjusts as licenses are added/removed</li>
+        <li>Applies only to the <strong>included/pool phase</strong> — before metered billing</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>When the cap is hit — pick one</h3>
+      <ul>
+        <li>🚫 <strong>Block:</strong> members stop consuming included credits (completions keep working)</li>
+        <li>💳 <strong>Roll to paid:</strong> usage continues as metered spend at $0.01/credit (requires the "AI credit paid usage" policy) — then cost center <em>budgets</em> take over</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout warn">⚠️ Enabling a pool does <strong>not</strong> retroactively redistribute credits already drawn this cycle. Disabling returns members to the shared enterprise pool.</div>
+
+  <h2>The full check sequence for one AI request</h2>
+  <div class="diagram">
+    <div class="dg-title">What GitHub evaluates when a licensed user makes an AI request</div>
+    <div class="flow">
+      <div class="node">1 · User-level budget<small>individual → cost center ULB → universal (most specific wins)</small></div><span class="arrow">→</span>
+      <div class="node accent">2 · Included pool<small>cost center pool cap if enabled, else shared pool</small></div><span class="arrow">→</span>
+      <div class="node">3 · Metered phase<small>cost center → org → enterprise budgets; lowest headroom blocks first</small></div><span class="arrow">→</span>
+      <div class="node soft">Served or blocked</div>
+    </div>
+  </div>
+
+  <h2>What consumes AI credits</h2>
+  <div class="grid c2">
+    <div class="card"><h3>✅ Consumes credits</h3><p>Copilot Chat · Copilot CLI · Copilot cloud agent · Copilot Spaces · Spark · third-party coding agents · code review (tokens billed to review requester)</p></div>
+    <div class="card"><h3>❌ Never consumes credits</h3><p><strong>Code completions and next edit suggestions</strong> — unlimited on all paid plans, and they keep working even when a user is blocked.</p></div>
+  </div>
+  <div class="callout warn">⚠️ Blocked users stay blocked until the next billing cycle or a budget increase. There is <strong>no automatic fallback</strong> to cheaper models. An enterprise budget is <em>not</em> a total bill cap: 400 Business seats ($7,600 licenses) + $5,000 enterprise budget = max bill $12,600.</div>
+
+  <details class="model-prices">
+    <summary>Model pricing per 1M tokens (July 2026)</summary>
+    <table class="tbl">
+      <tr><th>Model</th><th>Input</th><th>Cached</th><th>Output</th></tr>
+      <tr><td>GPT-5 mini</td><td>$0.25</td><td>$0.025</td><td>$2.00</td></tr>
+      <tr><td>GPT-5.4 mini</td><td>$0.75</td><td>$0.075</td><td>$4.50</td></tr>
+      <tr><td>GPT-5.3-Codex</td><td>$1.75</td><td>$0.175</td><td>$14.00</td></tr>
+      <tr><td>GPT-5.4 (≤272K)</td><td>$2.50</td><td>$0.25</td><td>$15.00</td></tr>
+      <tr><td>GPT-5.5 (≤272K)</td><td>$5.00</td><td>$0.50</td><td>$30.00</td></tr>
+      <tr><td>Claude Haiku 4.5</td><td>$1.00</td><td>$0.10</td><td>$5.00</td></tr>
+      <tr><td>Claude Sonnet 4.x</td><td>$3.00</td><td>$0.30</td><td>$15.00</td></tr>
+      <tr><td>Claude Sonnet 5 (promo)</td><td>$2.00</td><td>$0.20</td><td>$10.00</td></tr>
+      <tr><td>Claude Opus 4.5–4.8</td><td>$5.00</td><td>$0.50</td><td>$25.00</td></tr>
+      <tr><td>Claude Fable 5</td><td>$10.00</td><td>$1.00</td><td>$50.00</td></tr>
+      <tr><td>Gemini 2.5 Pro</td><td>$1.25</td><td>$0.125</td><td>$10.00</td></tr>
+      <tr><td>Gemini 3.1 Pro (≤200K)</td><td>$2.00</td><td>$0.20</td><td>$12.00</td></tr>
+    </table>
+    <p class="src">Anthropic models also bill cache writes (e.g., Sonnet $3.75/1M). Copilot code review model selection is automatic and undisclosed.</p>
+  </details>
+</section>
+
+<!-- ================= COPILOT SEATS ================= -->
+<section class="tab-panel" id="panel-copilot">
+  <h1>Copilot seat &amp; license management</h1>
+  <p class="lead">Two distinct licensing models coexist: <strong>enterprise-level direct assignment</strong> (Copilot Business only, no org required) and <strong>org-level enablement</strong> (Business or Enterprise, org owners pick who gets seats).</p>
+
+  <div class="diagram">
+    <div class="dg-title">The two paths to a Copilot seat</div>
+    <div class="tree">
+      <div class="lvl"><div class="node accent">Enterprise Account</div></div>
+      <div class="connector"></div>
+      <div class="lvl">
+        <div class="node">Path 1 · Enterprise-level <span class="badge ga">GA Oct 2025</span><small>Copilot Business only → users or enterprise teams<br>no org membership, no GHEC license needed</small></div>
+        <div class="node">Path 2 · Org enablement<small>enable Copilot per org (all or selected orgs)<br>Business or Enterprise plan per org — mixed plans OK</small></div>
+      </div>
+      <div class="connector"></div>
+      <div class="lvl">
+        <div class="node soft">Enterprise team member → auto grant/revoke</div>
+        <div class="node soft">Org owner assigns: all members, or selected members/teams</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid c2">
+    <div class="card">
+      <h3>Path 1 — enterprise direct</h3>
+      <ul>
+        <li>Enterprise → Billing &amp; Licensing → Licensing → Copilot → Manage</li>
+        <li>Assign to individual users or enterprise teams</li>
+        <li>Works for unaffiliated users (no org, no GHEC seat)</li>
+        <li><strong>Copilot Business only</strong> — no enterprise-level path for Copilot Enterprise</li>
+        <li>"Policies for enterprise-assigned users" governs these users when org policies are delegated</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Path 2 — via organizations</h3>
+      <ul>
+        <li>Enterprise enables Copilot for specific orgs or all orgs</li>
+        <li>With a Copilot Enterprise agreement: pick Business or Enterprise per org — <strong>mixed plans in one enterprise</strong></li>
+        <li>Org owner then chooses: all members / selected members / selected teams</li>
+        <li>Copilot Enterprise seats are only assignable this way</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout ok">✅ <strong>Deduplication:</strong> a user with access from both an org and the enterprise consumes <strong>one seat</strong> and gets the <strong>highest plan</strong> assigned.</div>
+
+  <h2>Seat management API surface</h2>
+  <table class="tbl">
+    <tr><th>Level</th><th>Endpoint</th><th>Purpose</th></tr>
+    <tr><td rowspan="3">Enterprise <span class="badge preview">Preview</span></td><td><code>GET /enterprises/{e}/copilot/billing/seats</code></td><td>All seats across orgs + enterprise teams (deduped in <code>total_seats</code>)</td></tr>
+    <tr><td><code>POST/DELETE /enterprises/{e}/copilot/billing/selected_enterprise_teams</code></td><td>Grant/revoke via enterprise teams</td></tr>
+    <tr><td><code>POST/DELETE /enterprises/{e}/copilot/billing/selected_users</code></td><td>Grant/revoke individual users</td></tr>
+    <tr><td rowspan="4">Organization</td><td><code>GET /orgs/{org}/copilot/billing</code></td><td>Subscription info, seat breakdown, feature policies</td></tr>
+    <tr><td><code>GET /orgs/{org}/copilot/billing/seats</code></td><td>List org seats</td></tr>
+    <tr><td><code>POST/DELETE /orgs/{org}/copilot/billing/selected_teams</code> · <code>selected_users</code></td><td>Grant/revoke via org teams / users</td></tr>
+    <tr><td><code>GET /orgs/{org}/members/{username}/copilot</code></td><td>One user's seat details &amp; last activity</td></tr>
+  </table>
+
+  <h2>Usage metrics API (2026 architecture)</h2>
+  <p>The old inline-JSON <code>/copilot/usage</code> endpoint is superseded. Metrics endpoints now return <strong>signed download links</strong> to report files. Requires the "Copilot usage metrics" policy = Enabled everywhere. History: up to 1 year (data since Oct 10, 2025).</p>
+  <table class="tbl">
+    <tr><th>Report</th><th>Enterprise</th><th>Org</th></tr>
+    <tr><td>28-day aggregate</td><td><code>…/copilot/metrics/reports/enterprise-28-day/latest</code></td><td><code>…/copilot/metrics/reports/organization-28-day/latest</code></td></tr>
+    <tr><td>1-day aggregate</td><td><code>…/enterprise-1-day?day=YYYY-MM-DD</code></td><td><code>…/organization-1-day</code></td></tr>
+    <tr><td>User-level</td><td><code>…/users-28-day/latest</code> · <code>…/users-1-day</code></td><td>same, org-scoped</td></tr>
+    <tr><td>User↔team join</td><td><code>…/user-teams-1-day</code></td><td>same, org-scoped</td></tr>
+  </table>
+</section>
+
+<!-- ================= POLICIES ================= -->
+<section class="tab-panel" id="panel-policies">
+  <h1>Copilot &amp; AI policies</h1>
+  <p class="lead">Since <strong>Feb 26, 2026</strong> all Copilot/agent governance lives in the enterprise <strong>AI Controls</strong> tab (the old Copilot policies page was removed). Each policy is set to Enforce, Delegate ("no policy"), or Disable.</p>
+
+  <h2>Key enterprise policies</h2>
+  <table class="tbl">
+    <tr><th>Policy</th><th>Surface</th><th>Notes</th></tr>
+    <tr><td>Copilot Chat in IDE / agent mode</td><td>IDEs</td><td>Agent mode policy added Nov 2025, defaults Enabled</td></tr>
+    <tr><td>Copilot CLI · Copilot on GitHub.com</td><td>CLI / web</td><td></td></tr>
+    <tr><td>Copilot cloud agent</td><td>Cloud agents</td><td>Enterprise selects <em>specific orgs</em> — not simple delegation</td></tr>
+    <tr><td>Third-party agents · code review · web search</td><td>Agents</td><td></td></tr>
+    <tr><td>MCP servers in Copilot</td><td>MCP</td><td>Does <em>not</em> govern GitHub MCP server in third-party hosts; enterprise MCP allowlist still in preview</td></tr>
+    <tr><td>Suggestions matching public code</td><td>IDEs</td><td>allow / block / unconfigured</td></tr>
+    <tr><td>Custom models · Spark · editor previews</td><td>Various</td><td></td></tr>
+    <tr><td>Copilot Metrics API</td><td>API</td><td>Most-restrictive conflict resolution</td></tr>
+  </table>
+
+  <h2>Conflict resolution for multi-org users</h2>
+  <div class="grid c2">
+    <div class="card"><h3>Least restrictive wins</h3><p>Chat, agent mode, CLI, web Copilot, web search, code review, cloud agent, Spark, MCP, editor previews, custom models — if <em>any</em> org enables it, the user has it.</p></div>
+    <div class="card"><h3>Most restrictive wins</h3><p>Public code suggestions, Copilot Metrics API, semantic indexing — if <em>any</em> org disables it, the user loses it. Across multiple <em>enterprises</em>, most restrictive usually applies.</p></div>
+  </div>
+
+  <h2>Agent Control Plane <span class="badge ga">GA Feb 2026</span></h2>
+  <ul>
+    <li>Enterprise-wide agent session visibility (24h), searchable and filterable by agent, usage tracking by org</li>
+    <li>Agentic audit-log fields: <code>actor_is_agent</code>, <code>user</code>, <code>agent_session.task</code></li>
+    <li>Custom agents: canonical path <code>.github-private/agents/*.md</code>, REST API for definitions, 1-click push protection rule</li>
+    <li>"AI manager" custom role delegates AI governance without full enterprise ownership</li>
+  </ul>
+</section>
+
+<!-- ================= SCENARIO LAB ================= -->
+<section class="tab-panel" id="panel-lab">
+  <h1>Scenario Lab 🧪</h1>
+  <p class="lead">Build an enterprise, split licenses across cost centers, toggle AI credit pools and budgets, then simulate a month of usage. Numbers use real July 2026 rates: Business $19/seat + 1,900 credits, Enterprise $39/seat + 3,900 credits, $0.01 per metered credit.</p>
+
+  <div class="card">
+    <h3>Presets</h3>
+    <div class="flow">
+      <button class="btn" onclick="loadPreset('runaway')">🔥 Runaway data-science team</button>
+      <button class="btn" onclick="loadPreset('fair')">⚖️ Fair chargeback setup</button>
+      <button class="btn" onclick="loadPreset('lockdown')">🔒 Hard-cap everything</button>
+      <button class="btn" onclick="loadPreset('blank')">✨ Start fresh</button>
+    </div>
+  </div>
+
+  <h2>1 · Enterprise licenses</h2>
+  <div class="card">
+    <div class="lab-controls">
+      <div><label>Copilot Business seats</label><input type="number" id="seatsB" min="0" max="100000" value="300"></div>
+      <div><label>Copilot Enterprise seats</label><input type="number" id="seatsE" min="0" max="100000" value="100"></div>
+      <div><label>Promo credits (Jun–Sep 2026)</label><select id="promo"><option value="0">Standard (1,900 / 3,900)</option><option value="1">Promo (3,000 / 7,000)</option></select></div>
+      <div><label>Enterprise budget (metered $, 0 = none)</label><input type="number" id="entBudget" min="0" value="5000"></div>
+    </div>
+    <div id="poolSummary" class="callout" style="margin-bottom:0;"></div>
+  </div>
+
+  <h2>2 · Cost centers</h2>
+  <div id="ccList"></div>
+  <button class="btn primary" onclick="addCC()">+ Add cost center</button>
+
+  <h2>3 · Results</h2>
+  <div class="legend">
+    <span><span class="sw" style="background:var(--cp-success)"></span>Included (pool)</span>
+    <span><span class="sw" style="background:var(--cp-warning)"></span>Metered overage ($0.01/credit)</span>
+    <span><span class="sw" style="background:var(--cp-danger)"></span>Blocked demand</span>
+  </div>
+  <div id="results"></div>
+  <div id="billSummary" class="card" style="margin-top:1rem;"></div>
+</section>
+
+<!-- ================= API EXPLORER ================= -->
+<section class="tab-panel" id="panel-api">
+  <h1>REST API Explorer</h1>
+  <p class="lead">Every admin/billing endpoint covered in this hub, with auth requirements, sample payloads, and copyable <code>curl</code>. All calls need headers: <code>Accept: application/vnd.github+json</code> and <code>X-GitHub-Api-Version</code>.</p>
+  <div class="lab-controls" style="margin:1rem 0; grid-template-columns: 2fr 1fr;">
+    <div><label>Search endpoints</label><input type="text" id="apiSearch" placeholder="e.g. cost center, seats, budget…" oninput="renderAPI()"></div>
+    <div><label>Category</label><select id="apiCat" onchange="renderAPI()"><option value="">All categories</option></select></div>
+  </div>
+  <div id="apiList"></div>
+</section>
+
+<!-- ================= CHANGELOG ================= -->
+<section class="tab-panel" id="panel-changelog">
+  <h1>Changelog tracker</h1>
+  <p class="lead">Relevant entries from the <a href="https://github.blog/changelog/" target="_blank" rel="noopener">GitHub Changelog</a>, filtered to enterprise admin, billing, cost centers, and Copilot management. A GitHub Actions workflow in this repo refreshes this list <strong>every Monday</strong> and updates the README.</p>
+  <div class="diagram">
+    <div class="dg-title">How the auto-update works</div>
+    <div class="flow">
+      <div class="node">⏰ Cron: Mondays 06:00 UTC</div><span class="arrow">→</span>
+      <div class="node">Fetch changelog RSS<small>main + copilot + enterprise labels</small></div><span class="arrow">→</span>
+      <div class="node">Keyword filter<small>cost centers, budgets, seats, AI credits…</small></div><span class="arrow">→</span>
+      <div class="node accent">Commit data/changelog.json + README</div><span class="arrow">→</span>
+      <div class="node">Site redeploys<small>Pages + Azure SWA</small></div>
+    </div>
+  </div>
+  <div id="clMeta" class="src"></div>
+  <div id="clList"></div>
+</section>
+
+<!-- SECTIONS:MORE -->
+
+</main>
+<footer>
+  GitHub Enterprise Admin Hub · educational reference, not affiliated with GitHub · data verified against docs.github.com &amp; github.blog/changelog (July 2026) · auto-updated weekly
+</footer>
+<script>
+/* ---------- tabs ---------- */
+function showTab(name){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('panel-'+name).classList.add('active');
+  document.querySelector('nav.tabs button[data-tab="'+name+'"]').classList.add('active');
+  window.scrollTo({top:0});
+  if(location.hash !== '#'+name) history.replaceState(null,'','#'+name);
+}
+document.querySelectorAll('nav.tabs button').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));
+if(location.hash && document.getElementById('panel-'+location.hash.slice(1))) showTab(location.hash.slice(1));
+
+/* ---------- scenario lab ---------- */
+const RATE = 0.01, PRICE_B = 19, PRICE_E = 39;
+let ccs = [];
+
+function ccTemplate(o){ return Object.assign({name:'New cost center', licB:0, licE:0, pool:false, behavior:'block', budget:0, stop:false, demand:0}, o); }
+
+function addCC(o){ ccs.push(ccTemplate(o||{})); renderCCs(); simulate(); }
+function removeCC(i){ ccs.splice(i,1); renderCCs(); simulate(); }
+function upd(i, key, val){ ccs[i][key] = (key==='name'||key==='behavior') ? val : +val; if(key==='pool'||key==='stop') ccs[i][key]=!!val; simulate(); }
+
+function credits(){ const promo=+document.getElementById('promo').value; return promo ? {b:3000,e:7000} : {b:1900,e:3900}; }
+function seats(){ return {b:+document.getElementById('seatsB').value||0, e:+document.getElementById('seatsE').value||0}; }
+
+function renderCCs(){
+  const el = document.getElementById('ccList');
+  el.innerHTML = ccs.map((c,i)=>`
+  <div class="cc-card">
+    <div class="lab-controls" style="grid-template-columns:2fr 1fr 1fr 1.4fr;">
+      <div><label>Name</label><input type="text" value="${c.name.replace(/"/g,'&quot;')}" oninput="upd(${i},'name',this.value)"></div>
+      <div><label>Business licenses</label><input type="number" min="0" value="${c.licB}" oninput="upd(${i},'licB',this.value)"></div>
+      <div><label>Enterprise licenses</label><input type="number" min="0" value="${c.licE}" oninput="upd(${i},'licE',this.value)"></div>
+      <div><label>AI credit pool cap</label><select onchange="upd(${i},'pool',this.value==='1'); upd(${i},'behavior',this.options[this.selectedIndex].dataset.b||'block');">
+        <option value="0" ${!c.pool?'selected':''}>Off — shared enterprise pool</option>
+        <option value="1" data-b="block" ${c.pool&&c.behavior==='block'?'selected':''}>On — block at cap</option>
+        <option value="1" data-b="paid" ${c.pool&&c.behavior==='paid'?'selected':''}>On — roll into paid usage</option>
+      </select></div>
+    </div>
+    <div class="lab-controls" style="grid-template-columns:1fr 1fr 2fr auto; margin-top:0.5rem;">
+      <div><label>Cost center budget ($, metered)</label><input type="number" min="0" value="${c.budget}" oninput="upd(${i},'budget',this.value)"></div>
+      <div><label>Stop usage at budget?</label><select onchange="upd(${i},'stop',this.value==='1')"><option value="0" ${!c.stop?'selected':''}>Alerts only</option><option value="1" ${c.stop?'selected':''}>Hard stop</option></select></div>
+      <div><label>Monthly AI credit demand: <strong id="dv${i}">${c.demand.toLocaleString()}</strong></label><input type="range" min="0" max="1000000" step="5000" value="${c.demand}" oninput="document.getElementById('dv${i}').textContent=(+this.value).toLocaleString(); upd(${i},'demand',this.value)"></div>
+      <div><button class="btn small" onclick="removeCC(${i})">✕ Remove</button></div>
+    </div>
+  </div>`).join('');
+}
+
+function simulate(){
+  const cr = credits(), st = seats();
+  const entPool = st.b*cr.b + st.e*cr.e;
+  const assignedB = ccs.reduce((s,c)=>s+c.licB,0), assignedE = ccs.reduce((s,c)=>s+c.licE,0);
+  const entBudget = +document.getElementById('entBudget').value||0;
+
+  let over = '';
+  if(assignedB>st.b || assignedE>st.e) over = `<br>⚠️ <strong>You assigned more licenses to cost centers (${assignedB} B / ${assignedE} E) than the enterprise owns (${st.b} B / ${st.e} E).</strong>`;
+  document.getElementById('poolSummary').innerHTML =
+    `🏊 Enterprise included pool: <strong>${entPool.toLocaleString()} AI credits/month</strong> (${st.b.toLocaleString()} × ${cr.b.toLocaleString()} + ${st.e.toLocaleString()} × ${cr.e.toLocaleString()}). License bill: <strong>$${(st.b*PRICE_B+st.e*PRICE_E).toLocaleString()}</strong>/month. Unassigned licenses fund the shared pool.${over}`;
+
+  const res = ccs.map(c=>({c, share:c.licB*cr.b+c.licE*cr.e, included:0, metered:0, blocked:0, alerts:[]}));
+
+  // phase 1: capped cost centers draw only their funded share
+  let cappedIncluded = 0;
+  res.filter(r=>r.c.pool).forEach(r=>{
+    r.included = Math.min(r.c.demand, r.share);
+    cappedIncluded += r.included;
+    const rem = r.c.demand - r.included;
+    if(rem>0){ if(r.c.behavior==='block'){ r.blocked = rem; r.alerts.push({t:'⛔ Pool cap hit — further included usage blocked',k:'danger'});} else { r.metered = rem; r.alerts.push({t:'💳 Pool cap hit — rolled into paid usage',k:'warn'});} }
+  });
+
+  // phase 2: uncapped cost centers share the remaining enterprise pool pro-rata
+  const uncapped = res.filter(r=>!r.c.pool);
+  const capReserved = res.filter(r=>r.c.pool).reduce((s,r)=>s+Math.min(r.share, r.c.demand>r.share?r.share:r.c.demand),0);
+  const sharedAvail = Math.max(0, entPool - capReserved);
+  const totUncDemand = uncapped.reduce((s,r)=>s+r.c.demand,0);
+  uncapped.forEach(r=>{
+    if(totUncDemand<=sharedAvail){ r.included = r.c.demand; }
+    else {
+      r.included = totUncDemand? Math.floor(sharedAvail * (r.c.demand/totUncDemand)) : 0;
+      r.metered = r.c.demand - r.included;
+      if(r.metered>0) r.alerts.push({t:'🏊 Shared pool exhausted — overage is metered',k:'warn'});
+    }
+  });
+
+  // budgets on metered phase
+  let totalSpend = 0;
+  res.forEach(r=>{
+    let spend = r.metered*RATE;
+    if(r.c.budget>0){
+      const pct = spend/r.c.budget*100;
+      if(r.c.stop && spend>r.c.budget){
+        const allowedCredits = Math.floor(r.c.budget/RATE);
+        r.blocked += r.metered-allowedCredits; r.metered = allowedCredits; spend = r.c.budget;
+        r.alerts.push({t:`🛑 Hard stop at $${r.c.budget.toLocaleString()} budget`,k:'danger'});
+      } else if(pct>=100) r.alerts.push({t:'🔔 100% budget alert',k:'danger'});
+      else if(pct>=90) r.alerts.push({t:'🔔 90% budget alert',k:'warn'});
+      else if(pct>=75) r.alerts.push({t:'🔔 75% budget alert',k:'warn'});
+    }
+    totalSpend += r.metered*RATE;
+  });
+
+  document.getElementById('results').innerHTML = res.length? res.map(r=>{
+    const tot = Math.max(1, r.included+r.metered+r.blocked);
+    const w = v=>Math.round(v/tot*100);
+    return `<div class="cc-card">
+      <strong>${r.c.name}</strong> <span class="badge api">${r.c.licB} B + ${r.c.licE} E licenses ${r.c.pool?'· pool: '+(r.share.toLocaleString())+' cr ('+(r.c.behavior==='block'?'block':'roll to paid')+')':'· shared pool'}</span>
+      <div class="usagebar">
+        <div class="seg included" style="width:${w(r.included)}%" title="Included: ${r.included.toLocaleString()}"></div>
+        <div class="seg metered" style="width:${w(r.metered)}%" title="Metered: ${r.metered.toLocaleString()}"></div>
+        <div class="seg blocked" style="width:${w(r.blocked)}%" title="Blocked: ${r.blocked.toLocaleString()}"></div>
+      </div>
+      <div style="font-size:0.82rem;color:var(--cp-text-muted);">Included <strong>${r.included.toLocaleString()}</strong> cr · Metered <strong>${r.metered.toLocaleString()}</strong> cr = <strong>$${(r.metered*RATE).toLocaleString(undefined,{maximumFractionDigits:2})}</strong> · Blocked <strong>${r.blocked.toLocaleString()}</strong> cr</div>
+      <div class="alert-badges">${r.alerts.map(a=>`<span class="badge ${a.k==='danger'?'':'preview'}" style="${a.k==='danger'?'background:rgba(220,38,38,0.12);color:var(--cp-danger);':''}">${a.t}</span>`).join('')}</div>
+    </div>`;
+  }).join('') : '<div class="card">Add a cost center (or load a preset) to see the simulation.</div>';
+
+  let entAlert = '';
+  if(entBudget>0){
+    const pct = totalSpend/entBudget*100;
+    if(pct>=100) entAlert = `<div class="callout warn">🔔 Enterprise budget exceeded (${pct.toFixed(0)}%). With "stop usage" enabled, further metered usage would be blocked enterprise-wide (lowest-headroom budget wins).</div>`;
+    else if(pct>=75) entAlert = `<div class="callout warn">🔔 Enterprise budget at ${pct.toFixed(0)}% — ${pct>=90?'90%':'75%'} alert sent to owners &amp; billing managers.</div>`;
+  }
+  const lic = st.b*PRICE_B+st.e*PRICE_E;
+  document.getElementById('billSummary').innerHTML = `
+    <h3>💰 Monthly bill</h3>
+    <table class="tbl">
+      <tr><td>Copilot licenses (${st.b} × $${PRICE_B} + ${st.e} × $${PRICE_E})</td><td style="text-align:right"><strong>$${lic.toLocaleString()}</strong></td></tr>
+      <tr><td>Metered AI credit overage (${entBudget>0?`enterprise budget $${entBudget.toLocaleString()}`:'no enterprise budget'})</td><td style="text-align:right"><strong>$${totalSpend.toLocaleString(undefined,{maximumFractionDigits:2})}</strong></td></tr>
+      <tr><td><strong>Total</strong></td><td style="text-align:right"><strong>$${(lic+totalSpend).toLocaleString(undefined,{maximumFractionDigits:2})}</strong></td></tr>
+    </table>${entAlert}
+    <p class="src">Remember: the enterprise budget caps only the metered portion — your maximum bill is licenses + budget, never just the budget.</p>`;
+}
+
+function loadPreset(name){
+  const set=(id,v)=>document.getElementById(id).value=v;
+  if(name==='blank'){ ccs=[]; set('seatsB',300); set('seatsE',100); set('promo',0); set('entBudget',5000); }
+  if(name==='runaway'){
+    set('seatsB',300); set('seatsE',100); set('promo',0); set('entBudget',5000);
+    ccs=[ ccTemplate({name:'Data Science (no cap 🔥)', licB:40, licE:10, pool:false, demand:900000}),
+          ccTemplate({name:'Platform Engineering', licB:160, licE:60, pool:false, demand:250000}),
+          ccTemplate({name:'Web Team', licB:100, licE:30, pool:false, demand:150000}) ];
+  }
+  if(name==='fair'){
+    set('seatsB',300); set('seatsE',100); set('promo',0); set('entBudget',5000);
+    ccs=[ ccTemplate({name:'Data Science', licB:40, licE:10, pool:true, behavior:'paid', budget:2000, stop:false, demand:900000}),
+          ccTemplate({name:'Platform Engineering', licB:160, licE:60, pool:true, behavior:'paid', budget:1500, stop:true, demand:250000}),
+          ccTemplate({name:'Web Team', licB:100, licE:30, pool:true, behavior:'paid', budget:500, stop:true, demand:150000}) ];
+  }
+  if(name==='lockdown'){
+    set('seatsB',300); set('seatsE',100); set('promo',0); set('entBudget',0);
+    ccs=[ ccTemplate({name:'Data Science', licB:40, licE:10, pool:true, behavior:'block', demand:900000}),
+          ccTemplate({name:'Platform Engineering', licB:160, licE:60, pool:true, behavior:'block', demand:250000}),
+          ccTemplate({name:'Web Team', licB:100, licE:30, pool:true, behavior:'block', demand:150000}) ];
+  }
+  renderCCs(); simulate();
+}
+['seatsB','seatsE','promo','entBudget'].forEach(id=>document.getElementById(id).addEventListener('input',simulate));
+loadPreset('fair');
+
+/* ---------- API explorer ---------- */
+const API = [
+ // Cost centers
+ {cat:'Cost Centers', m:'GET', p:'/enterprises/{enterprise}/settings/billing/cost-centers', d:'List all cost centers. Filter with ?state=active|deleted.', a:'Enterprise owner / billing manager / org owner', r:'{ "id","name","state","azure_subscription","ai_credit_pool_enabled","ai_credit_pool_state":{"target_amount","current_amount"},"resources":[{"type","name"}] }'},
+ {cat:'Cost Centers', m:'POST', p:'/enterprises/{enterprise}/settings/billing/cost-centers', d:'Create a cost center. Set ai_credit_pool_enabled to cap included AI credit draw (users/teams only when enabled).', a:'Enterprise owner / billing manager', b:'{ "name": "Engineering", "ai_credit_pool_enabled": true }'},
+ {cat:'Cost Centers', m:'GET', p:'/enterprises/{enterprise}/settings/billing/cost-centers/{cost_center_id}', d:'Get one cost center incl. resources (page/per_page, max 100).', a:'Enterprise owner / billing manager / org owner'},
+ {cat:'Cost Centers', m:'PATCH', p:'/enterprises/{enterprise}/settings/billing/cost-centers/{cost_center_id}', d:'Rename and/or toggle the AI credit pool.', a:'Enterprise owner / billing manager', b:'{ "name": "Engineering", "ai_credit_pool_enabled": false }'},
+ {cat:'Cost Centers', m:'DELETE', p:'/enterprises/{enterprise}/settings/billing/cost-centers/{cost_center_id}', d:'Archive a cost center (soft delete — still listable with ?state=deleted).', a:'Enterprise owner / billing manager', r:'{ "costCenterState": "CostCenterArchived" }'},
+ {cat:'Cost Centers', m:'POST', p:'/enterprises/{enterprise}/settings/billing/cost-centers/{cost_center_id}/resource', d:'Add up to 50 resources per call. Response lists reassigned_resources moved from other cost centers.', a:'Enterprise owner / billing manager', b:'{ "users":["monalisa"], "organizations":["my-org"], "repositories":["my-org/my-repo"], "enterprise_teams":["platform-team"] }'},
+ {cat:'Cost Centers', m:'DELETE', p:'/enterprises/{enterprise}/settings/billing/cost-centers/{cost_center_id}/resource', d:'Remove resources (same body shape as add).', a:'Enterprise owner / billing manager'},
+ // Budgets
+ {cat:'Budgets', m:'GET', p:'/organizations/{org}/settings/billing/budgets', d:'List budgets. Scopes: enterprise, organization, repository, cost_center, multi_user_customer, multi_user_cost_center, user.', a:'Org admin / billing manager'},
+ {cat:'Budgets', m:'POST', p:'/organizations/{org}/settings/billing/budgets', d:'Create a budget. budget_type: ProductPricing | SkuPricing | BundlePricing (ai_credits). For user scope you MUST pass "user" or you get HTTP 400.', a:'Org admin / billing manager', b:'{ "budget_amount":500, "prevent_further_usage":true, "budget_scope":"organization", "budget_type":"ProductPricing", "budget_product_sku":"actions", "budget_alerting":{"will_alert":true,"alert_recipients":["admin-user"]} }'},
+ {cat:'Budgets', m:'GET', p:'/organizations/{org}/settings/billing/budgets/{budget_id}', d:'Get one budget.', a:'Org admin / billing manager'},
+ {cat:'Budgets', m:'PATCH', p:'/organizations/{org}/settings/billing/budgets/{budget_id}', d:'Update amount/alerting/stop behavior. Scope cannot change after creation.', a:'Org admin / billing manager'},
+ {cat:'Budgets', m:'DELETE', p:'/organizations/{org}/settings/billing/budgets/{budget_id}', d:'Delete a budget.', a:'Org admin / billing manager'},
+ {cat:'Budgets', m:'POST', p:'/enterprises/{enterprise}/settings/billing/budgets', d:'Enterprise-level budget CRUD mirrors the org paths (scope enum includes "enterprise" and "cost_center").', a:'Enterprise owner / billing manager'},
+ // Usage
+ {cat:'Usage & Reports', m:'GET', p:'/enterprises/{enterprise}/settings/billing/usage', d:'Live usage items (enhanced billing platform). Params: year, month, day, cost_center_id. Summarized data only — detailed CSV needs the reports API.', a:'Enterprise owner / billing manager', r:'{ "usageItems":[{"date","product","sku","quantity","unitType","pricePerUnit","grossAmount","discountAmount","netAmount","organizationName","repositoryName"}] }'},
+ {cat:'Usage & Reports', m:'GET', p:'/enterprises/{enterprise}/settings/billing/usage/summary', d:'Most filterable endpoint: year, month, day, organization, repository, product, sku, cost_center_id. 24-month history.', a:'Enterprise owner / billing manager'},
+ {cat:'Usage & Reports', m:'GET', p:'/enterprises/{enterprise}/settings/billing/ai_credit/usage', d:'AI credit usage with token-level breakdown. Filters: year, month, day, organization, user, model, product, cost_center_id.', a:'Enterprise owner / billing manager'},
+ {cat:'Usage & Reports', m:'GET', p:'/enterprises/{enterprise}/settings/billing/premium_request/usage', d:'Legacy premium-request compatibility endpoint (same shape as ai_credit/usage).', a:'Enterprise owner / billing manager'},
+ {cat:'Usage & Reports', m:'POST', p:'/enterprises/{enterprise}/settings/billing/reports', d:'Generate an async CSV report. Types: detailed, summarized, premium_request, ai_credit. Returns HTTP 202 — poll the report id.', a:'Enterprise owner / billing manager', b:'{ "report_type":"detailed", "start_date":"2026-06-01", "end_date":"2026-06-30", "send_email":false }'},
+ {cat:'Usage & Reports', m:'GET', p:'/enterprises/{enterprise}/settings/billing/reports/{report_id}', d:'Poll report status; returns download_urls when completed.', a:'Enterprise owner / billing manager', r:'{ "status":"processing|completed|failed", "download_urls":["…"] }'},
+ // Copilot enterprise seats
+ {cat:'Copilot Seats (Enterprise)', m:'GET', p:'/enterprises/{enterprise}/copilot/billing/seats', d:'All seats across orgs + enterprise teams. Deduped total_seats; each seat shows assigning_team (type: "enterprise" for ent teams).', a:'manage_billing:copilot or read:enterprise'},
+ {cat:'Copilot Seats (Enterprise)', m:'POST', p:'/enterprises/{enterprise}/copilot/billing/selected_enterprise_teams', d:'Grant Copilot Business to enterprise teams (auto grant/revoke with membership). 422 if Copilot Business not enabled.', a:'manage_billing:copilot or admin:enterprise', b:'{ "selected_enterprise_teams": ["platform-team"] }'},
+ {cat:'Copilot Seats (Enterprise)', m:'DELETE', p:'/enterprises/{enterprise}/copilot/billing/selected_enterprise_teams', d:'Remove enterprise teams (seats → pending cancellation, end of cycle).', a:'manage_billing:copilot or admin:enterprise'},
+ {cat:'Copilot Seats (Enterprise)', m:'POST', p:'/enterprises/{enterprise}/copilot/billing/selected_users', d:'Grant Copilot Business directly to users — works for unaffiliated users with no org.', a:'manage_billing:copilot or admin:enterprise', b:'{ "selected_usernames": ["monalisa"] }'},
+ {cat:'Copilot Seats (Enterprise)', m:'DELETE', p:'/enterprises/{enterprise}/copilot/billing/selected_users', d:'Revoke enterprise-assigned user seats.', a:'manage_billing:copilot or admin:enterprise'},
+ // Copilot org seats
+ {cat:'Copilot Seats (Org)', m:'GET', p:'/orgs/{org}/copilot/billing', d:'Org subscription: seat_breakdown (total, added_this_cycle, pending_cancellation, active/inactive), policies (ide_chat, cli…), seat_management_setting, plan_type.', a:'manage_billing:copilot or read:org'},
+ {cat:'Copilot Seats (Org)', m:'GET', p:'/orgs/{org}/copilot/billing/seats', d:'List all org Copilot seats with assignee and last activity.', a:'manage_billing:copilot or read:org'},
+ {cat:'Copilot Seats (Org)', m:'POST', p:'/orgs/{org}/copilot/billing/selected_teams', d:'Grant seats to org teams.', a:'manage_billing:copilot or admin:org', b:'{ "selected_teams": ["web-team"] }'},
+ {cat:'Copilot Seats (Org)', m:'DELETE', p:'/orgs/{org}/copilot/billing/selected_teams', d:'Remove org teams from the subscription.', a:'manage_billing:copilot or admin:org'},
+ {cat:'Copilot Seats (Org)', m:'POST', p:'/orgs/{org}/copilot/billing/selected_users', d:'Grant seats to individual org members.', a:'manage_billing:copilot or admin:org', b:'{ "selected_usernames": ["monalisa"] }'},
+ {cat:'Copilot Seats (Org)', m:'DELETE', p:'/orgs/{org}/copilot/billing/selected_users', d:'Revoke individual seats (end of cycle).', a:'manage_billing:copilot or admin:org'},
+ {cat:'Copilot Seats (Org)', m:'GET', p:'/orgs/{org}/members/{username}/copilot', d:'One user\'s seat detail: plan, pending cancellation, last_activity_at / editor.', a:'manage_billing:copilot or read:org'},
+ // Copilot metrics
+ {cat:'Copilot Metrics', m:'GET', p:'/enterprises/{enterprise}/copilot/metrics/reports/enterprise-28-day/latest', d:'Latest 28-day enterprise aggregate. Returns signed download_links, not inline JSON. Requires metrics policy "Enabled everywhere".', a:'manage_billing:copilot or read:enterprise'},
+ {cat:'Copilot Metrics', m:'GET', p:'/enterprises/{enterprise}/copilot/metrics/reports/enterprise-1-day?day=YYYY-MM-DD', d:'1-day enterprise report.', a:'manage_billing:copilot or read:enterprise'},
+ {cat:'Copilot Metrics', m:'GET', p:'/enterprises/{enterprise}/copilot/metrics/reports/users-28-day/latest', d:'Latest 28-day user-level report (also users-1-day, user-teams-1-day).', a:'manage_billing:copilot or read:enterprise'},
+ {cat:'Copilot Metrics', m:'GET', p:'/orgs/{org}/copilot/metrics/reports/organization-28-day/latest', d:'Org-level metrics reports (also organization-1-day, users-1-day, users-28-day/latest, user-teams-1-day).', a:'read:org'},
+ // Enterprise teams
+ {cat:'Enterprise Teams', m:'GET', p:'/enterprises/{enterprise}/teams', d:'List enterprise teams.', a:'read:enterprise'},
+ {cat:'Enterprise Teams', m:'POST', p:'/enterprises/{enterprise}/teams', d:'Create a team. organization_selection_type: disabled | selected | all. Slug becomes ent:name-slug.', a:'admin:enterprise', b:'{ "name":"Platform SRE", "description":"Cross-org SRE group", "organization_selection_type":"selected" }'},
+ {cat:'Enterprise Teams', m:'PATCH', p:'/enterprises/{enterprise}/teams/{team_slug}', d:'Update team (name, description, org selection, IdP group).', a:'admin:enterprise'},
+ {cat:'Enterprise Teams', m:'DELETE', p:'/enterprises/{enterprise}/teams/{team_slug}', d:'Delete a team.', a:'admin:enterprise'},
+ {cat:'Enterprise Teams', m:'POST', p:'/enterprises/{enterprise}/teams/{team}/memberships/add', d:'Bulk add members (also …/remove for bulk removal).', a:'admin:enterprise', b:'{ "usernames": ["monalisa","octocat"] }'},
+ {cat:'Enterprise Teams', m:'PUT', p:'/enterprises/{enterprise}/teams/{team}/memberships/{username}', d:'Add a single member (DELETE to remove; GET to inspect).', a:'admin:enterprise'},
+ {cat:'Enterprise Teams', m:'POST', p:'/enterprises/{enterprise}/teams/{team}/organizations/add', d:'Bulk assign the team to organizations (also …/remove).', a:'admin:enterprise', b:'{ "organizations": ["my-org"] }'},
+ {cat:'Enterprise Teams', m:'PUT', p:'/enterprises/{enterprise}/teams/{team}/organizations/{org}', d:'Assign to one org (DELETE to unassign; GET to check).', a:'admin:enterprise'},
+];
+
+function curl(e){
+  const body = e.b ? ` \\\n  -d '${e.b}'` : '';
+  return `curl -X ${e.m} \\\n  -H "Accept: application/vnd.github+json" \\\n  -H "Authorization: Bearer YOUR_TOKEN" \\\n  -H "X-GitHub-Api-Version: 2022-11-28" \\\n  https://api.github.com${e.p.split('?')[0]}${body}`;
+}
+function renderAPI(){
+  const q = (document.getElementById('apiSearch').value||'').toLowerCase();
+  const cat = document.getElementById('apiCat').value;
+  const list = API.filter(e=>(!cat||e.cat===cat) && (!q || (e.p+e.d+e.cat).toLowerCase().includes(q)));
+  let lastCat='';
+  document.getElementById('apiList').innerHTML = list.map((e,i)=>{
+    const head = e.cat!==lastCat? `<h2>${e.cat} <span class="badge api">${API.filter(x=>x.cat===e.cat).length} endpoints</span></h2>`:'';
+    lastCat=e.cat;
+    return head+`<div class="api-item" id="api${i}">
+      <div class="api-head" onclick="this.parentElement.classList.toggle('open')">
+        <span class="method ${e.m}">${e.m}</span><span class="api-path">${e.p}</span>
+      </div>
+      <div class="api-body">
+        <p>${e.d}</p>
+        <p><strong>Access:</strong> <code>${e.a}</code></p>
+        ${e.b?`<p><strong>Body:</strong></p><pre class="code">${e.b}</pre>`:''}
+        ${e.r?`<p><strong>Response shape:</strong></p><pre class="code">${e.r}</pre>`:''}
+        <p><strong>curl:</strong></p><pre class="code">${curl(e)}</pre>
+      </div>
+    </div>`;
+  }).join('') || '<div class="card">No endpoints match.</div>';
+}
+(()=>{ const sel=document.getElementById('apiCat'); [...new Set(API.map(e=>e.cat))].forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;sel.appendChild(o);}); renderAPI(); })();
+
+/* ---------- changelog ---------- */
+const CL_FALLBACK = [
+ {date:'2026-07-02', title:'Cost centers now support AI credit pools', url:'https://github.blog/changelog/2026-07-02-cost-centers-now-support-included-usage-caps', summary:'Cap how much of the enterprise\'s monthly included AI credits a cost center can use. REST API today; UI coming soon.', labels:['Release','copilot']},
+ {date:'2026-07-02', title:'Improved accuracy and coverage in Copilot usage metrics reports', url:'https://github.blog/changelog/2026-07-02-improved-accuracy-and-coverage-in-copilot-usage-metrics-reports', summary:'Copilot CLI reports suggested lines of code; more complete user coverage.', labels:['Improvement','copilot']},
+ {date:'2026-06-30', title:'Per-user AI credit budgets available for cost centers', url:'https://github.blog/changelog/2026-06-30-per-user-ai-credit-budgets-available-for-cost-centers', summary:'User-level budgets scoped to a cost center via the REST API.', labels:['Release','billing']},
+ {date:'2026-06-22', title:'Assign enterprise teams to cost centers', url:'https://github.blog/changelog/2026-06-22-assign-enterprise-teams-to-cost-centers', summary:'SCIM-synced enterprise teams can drive cost attribution.', labels:['Release','enterprise']},
+ {date:'2026-06-04', title:'Enterprise Teams is now generally available', url:'https://github.blog/changelog/2026-06-04-enterprise-teams-is-now-generally-available', summary:'Cross-org teams GA: mentions, review requests, ruleset bypass, IdP sync (EMU), apps/PAT support.', labels:['Release','enterprise']},
+ {date:'2026-06-04', title:'Budget and usage management APIs now generally available', url:'https://github.blog/changelog/2026-06-04-budget-and-usage-management-apis-now-generally-available', summary:'Budgets, cost centers, and usage endpoints reach GA.', labels:['Release','billing']},
+ {date:'2026-02-26', title:'Enterprise AI Controls & Agent Control Plane now generally available', url:'https://github.blog/changelog/2026-02-26-enterprise-ai-controls-agent-control-plane-now-generally-available', summary:'AI Controls tab is the permanent policy home; searchable agent sessions; custom agents API.', labels:['Release','enterprise']},
+ {date:'2025-10-28', title:'Managing Copilot Business in enterprise is now generally available', url:'https://github.blog/changelog/2025-10-28-managing-copilot-business-in-enterprise-is-now-generally-available', summary:'Assign Copilot Business at enterprise level to users/teams, license deduplication.', labels:['Release','copilot']},
+ {date:'2025-09-04', title:'Manage Copilot and users via enterprise teams (public preview)', url:'https://github.blog/changelog/2025-09-04-manage-copilot-and-users-via-enterprise-teams-in-public-preview', summary:'Enterprise teams launch; unaffiliated users; SCIM sync for EMU.', labels:['Preview','enterprise']},
+];
+function renderCL(entries, meta){
+  document.getElementById('clMeta').textContent = meta||'';
+  document.getElementById('clList').innerHTML = entries.map(e=>`
+    <div class="card" style="margin:0.6rem 0;">
+      <div style="display:flex;gap:0.6rem;align-items:baseline;flex-wrap:wrap;">
+        <span class="badge api">${e.date}</span>
+        <a href="${e.url}" target="_blank" rel="noopener"><strong>${e.title}</strong></a>
+        ${(e.labels||[]).slice(0,3).map(l=>`<span class="badge">${l}</span>`).join('')}
+      </div>
+      <p style="font-size:0.88rem;color:var(--cp-text-muted);margin-top:0.3rem;">${e.summary||''}</p>
+    </div>`).join('');
+}
+fetch('data/changelog.json').then(r=>r.ok?r.json():Promise.reject()).then(j=>{
+  const merged = [...j.entries];
+  CL_FALLBACK.forEach(f=>{ if(!merged.some(m=>m.url.replace(/\/$/,'')===f.url.replace(/\/$/,''))) merged.push(f); });
+  merged.sort((a,b)=>b.date.localeCompare(a.date));
+  renderCL(merged, 'Live data — last checked '+(j.updated||'')+' by the weekly workflow.');
+}).catch(()=>renderCL(CL_FALLBACK,'Showing built-in snapshot (live data/changelog.json not reachable).'));
+</script>
+</body>
+</html>

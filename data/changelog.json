@@ -1,0 +1,63 @@
+{
+  "updated": "2026-07-07T10:16:50+00:00",
+  "entries": [
+    {
+      "title": "Improved accuracy and coverage in Copilot usage metrics reports",
+      "url": "https://github.blog/changelog/2026-07-02-improved-accuracy-and-coverage-in-copilot-usage-metrics-reports",
+      "date": "2026-07-02",
+      "summary": "We&#8217;ve made three improvements to the Copilot usage metrics API that make its reports more complete and accurate: GitHub Copilot CLI now reports suggested lines of code, users seen only&#8230; The post Improved accuracy and coverage in Copilot usage metrics reports appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Copilot agent session streaming is now in public preview",
+      "url": "https://github.blog/changelog/2026-07-02-copilot-agent-session-streaming-is-now-in-public-preview",
+      "date": "2026-07-02",
+      "summary": "GitHub Enterprise Cloud customers with enterprise managed users can now access GitHub Copilot agent session data across all Copilot clients, including: Cloud agents operating on github.com and data resident deployments&#8230; The post Copilot agent session streaming is now in public preview appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Cost centers now support AI credit pools",
+      "url": "https://github.blog/changelog/2026-07-02-cost-centers-now-support-included-usage-caps",
+      "date": "2026-07-02",
+      "summary": "You can now cap how much of your enterprise&#8217;s monthly included AI credits a cost center can use. This is available through the REST API today. Management in the cost&#8230; The post Cost centers now support AI credit pools appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "account management",
+        "copilot"
+      ]
+    },
+    {
+      "title": "Enterprises can default to auto model selection",
+      "url": "https://github.blog/changelog/2026-07-01-enterprises-can-default-to-auto-model-selection",
+      "date": "2026-07-01",
+      "summary": "Enterprise administrators can now set model to auto in the enterprise managed-settings.json to make Copilot auto model selection the default for new conversations. Add auto to .github-private/.github/copilot/managed-settings.json in your source&#8230; The post Enterprises can default to auto model selection appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "client apps",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Enterprise managed-settings.json is generally available",
+      "url": "https://github.blog/changelog/2026-07-01-enterprise-managed-settings-json-is-generally-available",
+      "date": "2026-07-01",
+      "summary": "GitHub Enterprise Cloud customers can configure AI standards through a managed-settings.json file maintained in a .github-private repository in a selected organization. This allows the enterprise to define new governance and&#8230; The post Enterprise managed-settings.json is generally available appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "client apps",
+        "copilot",
+        "enterprise management tools"
+      ]
+    }
+  ]
+}
