@@ -84,7 +84,7 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-07-07T10:16:50+00:00 (auto-updated weekly)_
+_Last checked: 2026-07-07T10:25:03+00:00 (auto-updated weekly)_
 
 - **2026-07-02** — [Improved accuracy and coverage in Copilot usage metrics reports](https://github.blog/changelog/2026-07-02-improved-accuracy-and-coverage-in-copilot-usage-metrics-reports) `Improvement` `account management` `copilot`
 - **2026-07-02** — [Copilot agent session streaming is now in public preview](https://github.blog/changelog/2026-07-02-copilot-agent-session-streaming-is-now-in-public-preview) `Improvement` `copilot` `enterprise management tools`
