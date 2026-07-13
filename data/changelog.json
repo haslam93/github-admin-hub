@@ -1,6 +1,74 @@
 {
-  "updated": "2026-07-07T10:25:03+00:00",
+  "updated": "2026-07-13T08:58:13+00:00",
   "entries": [
+    {
+      "title": "Per-user states for multi-user budgets in the REST API",
+      "url": "https://github.blog/changelog/2026-07-10-per-user-states-for-multi-user-budgets-in-the-rest-api",
+      "date": "2026-07-10",
+      "summary": "You can now retrieve every user&#8217;s progress against a multi-user budget from a single REST API endpoint. This makes it much faster to find who is close to their limit&#8230; The post Per-user states for multi-user budgets in the REST API appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "account management",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Enterprise-managed OpenTelemetry export for VS Code and CLI",
+      "url": "https://github.blog/changelog/2026-07-08-enterprise-managed-opentelemetry-export-for-vs-code-and-cli",
+      "date": "2026-07-08",
+      "summary": "Organizations can now mandate where GitHub Copilot sends OpenTelemetry (OTel) data, so telemetry flows to an approved collector without each developer setting OTEL_* environment variables. The configuration is delivered through&#8230; The post Enterprise-managed OpenTelemetry export for VS Code and CLI appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "client apps",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Deploy managed Copilot settings via MDM in VS Code and CLI",
+      "url": "https://github.blog/changelog/2026-07-08-deploy-managed-copilot-settings-via-mdm-in-vs-code-and-cli",
+      "date": "2026-07-08",
+      "summary": "Enterprise administrators can now deliver managed GitHub Copilot settings directly to devices through native mobile device management (MDM) and file-based configuration, in addition to the existing server-managed channel. This is&#8230; The post Deploy managed Copilot settings via MDM in VS Code and CLI appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "client apps",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Add review cycles and time to adoption phases in the usage API",
+      "url": "https://github.blog/changelog/2026-07-07-add-review-cycles-and-time-to-adoption-phases-in-the-usage-api",
+      "date": "2026-07-08",
+      "summary": "The Copilot usage metrics API now reports two additional code-review velocity metrics for each AI adoption phase, extending the adoption phase cohorts fields available in the enterprise and organization reports.&#8230; The post Add review cycles and time to adoption phases in the usage API appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Kimi K2.7 now available for Copilot Business and Enterprise",
+      "url": "https://github.blog/changelog/2026-07-07-kimi-k2-7-now-available-for-copilot-business-and-enterprise",
+      "date": "2026-07-08",
+      "summary": "On July 1, 2026, we announced Kimi K2.7 would be available to Copilot Pro, Pro+, and Max plans. The model is now additionally available on Copilot Business and Copilot Enterprise&#8230; The post Kimi K2.7 now available for Copilot Business and Enterprise appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "copilot"
+      ]
+    },
+    {
+      "title": "Per-user budgets for cost centers in the billing UI",
+      "url": "https://github.blog/changelog/2026-07-07-per-user-budgets-for-cost-centers-in-the-billing-ui",
+      "date": "2026-07-07",
+      "summary": "Enterprise admins can now create cost center user-level budgets directly in the billing UI where you manage cost centers and budgets. This feature is available for GitHub Enterprise Cloud. This&#8230; The post Per-user budgets for cost centers in the billing UI appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
     {
       "title": "Improved accuracy and coverage in Copilot usage metrics reports",
       "url": "https://github.blog/changelog/2026-07-02-improved-accuracy-and-coverage-in-copilot-usage-metrics-reports",

@@ -84,8 +84,14 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-07-07T10:25:03+00:00 (auto-updated weekly)_
+_Last checked: 2026-07-13T08:58:13+00:00 (auto-updated weekly)_
 
+- **2026-07-10** — [Per-user states for multi-user budgets in the REST API](https://github.blog/changelog/2026-07-10-per-user-states-for-multi-user-budgets-in-the-rest-api) `Release` `account management` `enterprise management tools`
+- **2026-07-08** — [Enterprise-managed OpenTelemetry export for VS Code and CLI](https://github.blog/changelog/2026-07-08-enterprise-managed-opentelemetry-export-for-vs-code-and-cli) `Release` `client apps` `copilot`
+- **2026-07-08** — [Deploy managed Copilot settings via MDM in VS Code and CLI](https://github.blog/changelog/2026-07-08-deploy-managed-copilot-settings-via-mdm-in-vs-code-and-cli) `Release` `client apps` `copilot`
+- **2026-07-08** — [Add review cycles and time to adoption phases in the usage API](https://github.blog/changelog/2026-07-07-add-review-cycles-and-time-to-adoption-phases-in-the-usage-api) `Improvement` `account management` `copilot`
+- **2026-07-08** — [Kimi K2.7 now available for Copilot Business and Enterprise](https://github.blog/changelog/2026-07-07-kimi-k2-7-now-available-for-copilot-business-and-enterprise) `Release` `copilot`
+- **2026-07-07** — [Per-user budgets for cost centers in the billing UI](https://github.blog/changelog/2026-07-07-per-user-budgets-for-cost-centers-in-the-billing-ui) `Improvement` `copilot` `enterprise management tools`
 - **2026-07-02** — [Improved accuracy and coverage in Copilot usage metrics reports](https://github.blog/changelog/2026-07-02-improved-accuracy-and-coverage-in-copilot-usage-metrics-reports) `Improvement` `account management` `copilot`
 - **2026-07-02** — [Copilot agent session streaming is now in public preview](https://github.blog/changelog/2026-07-02-copilot-agent-session-streaming-is-now-in-public-preview) `Improvement` `copilot` `enterprise management tools`
 - **2026-07-02** — [Cost centers now support AI credit pools](https://github.blog/changelog/2026-07-02-cost-centers-now-support-included-usage-caps) `Release` `account management` `copilot`
