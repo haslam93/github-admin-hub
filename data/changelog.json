@@ -1,6 +1,30 @@
 {
-  "updated": "2026-07-13T08:58:13+00:00",
+  "updated": "2026-07-20T08:48:26+00:00",
   "entries": [
+    {
+      "title": "Repository-level GitHub Copilot usage metrics generally available",
+      "url": "https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available",
+      "date": "2026-07-17",
+      "summary": "The Copilot usage metrics REST API now reports repository-level activity. Two new endpoints return a daily, per-repository breakdown of pull request activity for Copilot coding agent and Copilot code review.&#8230; The post Repository-level GitHub Copilot usage metrics generally available appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "GitHub Copilot app now available in the usage metrics API",
+      "url": "https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api",
+      "date": "2026-07-17",
+      "summary": "The Copilot usage metrics API now reports the GitHub Copilot app usage in the enterprise and organization 1-day and 28-day reports. This gives enterprise and organization admins visibility into the&#8230; The post GitHub Copilot app now available in the usage metrics API appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
     {
       "title": "Per-user states for multi-user budgets in the REST API",
       "url": "https://github.blog/changelog/2026-07-10-per-user-states-for-multi-user-budgets-in-the-rest-api",
