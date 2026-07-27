@@ -1,6 +1,41 @@
 {
-  "updated": "2026-07-20T08:48:26+00:00",
+  "updated": "2026-07-27T09:39:43+00:00",
   "entries": [
+    {
+      "title": "New Copilot usage metrics impact dashboard",
+      "url": "https://github.blog/changelog/2026-07-22-new-copilot-usage-metrics-impact-dashboard",
+      "date": "2026-07-22",
+      "summary": "We&#8217;ve released a new Copilot metrics impact dashboard for enterprise administrators and organization owners. This dashboard helps you tell a deeper Copilot impact story by sharing not just who is&#8230; The post New Copilot usage metrics impact dashboard appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "AI credit pools for cost centers in the billing UI",
+      "url": "https://github.blog/changelog/2026-07-20-ai-credit-pools-for-cost-centers-in-the-billing-ui",
+      "date": "2026-07-20",
+      "summary": "You can now manage a cost center&#8217;s AI credit pool directly in the billing UI where you create and edit cost centers. Previously, you could only manage this through the&#8230; The post AI credit pools for cost centers in the billing UI appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Copilot users can now see AI credits used per billing cycle",
+      "url": "https://github.blog/changelog/2026-07-20-copilot-users-can-now-see-ai-credits-used-per-billing-cycle",
+      "date": "2026-07-20",
+      "summary": "Copilot Business and Copilot Enterprise users can now see how many AI credits they&#8217;ve used this billing cycle, even without an individual budget. Find this on your GitHub Copilot usage&#8230; The post Copilot users can now see AI credits used per billing cycle appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
     {
       "title": "Repository-level GitHub Copilot usage metrics generally available",
       "url": "https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available",

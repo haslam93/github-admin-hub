@@ -84,8 +84,11 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-07-20T08:48:26+00:00 (auto-updated weekly)_
+_Last checked: 2026-07-27T09:39:43+00:00 (auto-updated weekly)_
 
+- **2026-07-22** — [New Copilot usage metrics impact dashboard](https://github.blog/changelog/2026-07-22-new-copilot-usage-metrics-impact-dashboard) `Release` `account management` `copilot`
+- **2026-07-20** — [AI credit pools for cost centers in the billing UI](https://github.blog/changelog/2026-07-20-ai-credit-pools-for-cost-centers-in-the-billing-ui) `Improvement` `copilot` `enterprise management tools`
+- **2026-07-20** — [Copilot users can now see AI credits used per billing cycle](https://github.blog/changelog/2026-07-20-copilot-users-can-now-see-ai-credits-used-per-billing-cycle) `Improvement` `account management` `copilot`
 - **2026-07-17** — [Repository-level GitHub Copilot usage metrics generally available](https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available) `Release` `account management` `copilot`
 - **2026-07-17** — [GitHub Copilot app now available in the usage metrics API](https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api) `Improvement` `account management` `copilot`
 - **2026-07-10** — [Per-user states for multi-user budgets in the REST API](https://github.blog/changelog/2026-07-10-per-user-states-for-multi-user-budgets-in-the-rest-api) `Release` `account management` `enterprise management tools`
