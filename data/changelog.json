@@ -1,6 +1,50 @@
 {
-  "updated": "2026-07-27T09:39:43+00:00",
+  "updated": "2026-08-03T09:32:44+00:00",
   "entries": [
+    {
+      "title": "Enterprise teams model policy targeting in public preview",
+      "url": "https://github.blog/changelog/2026-07-31-enterprise-teams-model-policy-targeting-in-public-preview",
+      "date": "2026-07-31",
+      "summary": "You can now take advantage of user-based model policy targeting for GitHub Enterprise customers with Copilot Business or Copilot Enterprise licenses. This feature empowers AI administrators to set a baseline&#8230; The post Enterprise teams model policy targeting in public preview appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Default model enablement for Copilot Business and Enterprise",
+      "url": "https://github.blog/changelog/2026-07-29-default-model-enablement-for-copilot-business-and-enterprise",
+      "date": "2026-07-29",
+      "summary": "We&#8217;re introducing a global default enablement policy for generally available Copilot models on Copilot Business and Copilot Enterprise plans. Instead of requiring admins to manually turn on each new model&#8230; The post Default model enablement for Copilot Business and Enterprise appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "copilot"
+      ]
+    },
+    {
+      "title": "GitHub Copilot app usage metrics now expand across report rollups",
+      "url": "https://github.blog/changelog/2026-07-28-github-copilot-app-usage-metrics-now-expand-across-report-rollups",
+      "date": "2026-07-28",
+      "summary": "Copilot app usage is now reported across much more of the Copilot usage metrics API. Individual Copilot app activity is now attributed to users in the enterprise-user and organization-user reports.&#8230; The post GitHub Copilot app usage metrics now expand across report rollups appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "GitHub Copilot for JetBrains adds improved OpenTelemetry configuration and model management",
+      "url": "https://github.blog/changelog/2026-07-27-github-copilot-for-jetbrains-adds-improvved-opentelemetry-configuration-and-model-management",
+      "date": "2026-07-28",
+      "summary": "This update brings more control and clarity to your GitHub Copilot for JetBrains workflows. You can now connect MCP servers and custom agents in Claude agent flows, tune telemetry and&#8230; The post GitHub Copilot for JetBrains adds improved OpenTelemetry configuration and model management appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
     {
       "title": "New Copilot usage metrics impact dashboard",
       "url": "https://github.blog/changelog/2026-07-22-new-copilot-usage-metrics-impact-dashboard",
