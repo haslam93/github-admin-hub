@@ -84,8 +84,14 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-08-03T09:32:44+00:00 (auto-updated weekly)_
+_Last checked: 2026-08-10T07:20:15+00:00 (auto-updated weekly)_
 
+- **2026-08-07** — [Enterprises can now install third-party GitHub Apps](https://github.blog/changelog/2026-08-07-enterprises-can-now-install-third-party-github-apps) `Improvement` `ecosystem &amp; accessibility` `enterprise management tools`
+- **2026-08-07** — [Copilot impact dashboard adds a return on investment section](https://github.blog/changelog/2026-08-07-copilot-impact-dashboard-adds-a-return-on-investment-section) `Improvement` `account management` `copilot`
+- **2026-08-07** — [Copilot usage metrics API adds agent app activity](https://github.blog/changelog/2026-08-07-copilot-usage-metrics-api-adds-agent-app-activity) `Improvement` `account management` `copilot`
+- **2026-08-07** — [MCP allowlists in enterprise managed settings](https://github.blog/changelog/2026-08-06-mcp-allowlists-in-enterprise-managed-settings) `Release` `copilot`
+- **2026-08-06** — [Kimi K3 is now available in GitHub Copilot](https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot) `Release` `copilot`
+- **2026-08-04** — [Retiring the Copilot Billing Preview app](https://github.blog/changelog/2026-08-04-retiring-the-copilot-billing-preview-app) `Retired` `copilot` `enterprise management tools`
 - **2026-07-31** — [Enterprise teams model policy targeting in public preview](https://github.blog/changelog/2026-07-31-enterprise-teams-model-policy-targeting-in-public-preview) `Improvement` `copilot` `enterprise management tools`
 - **2026-07-29** — [Default model enablement for Copilot Business and Enterprise](https://github.blog/changelog/2026-07-29-default-model-enablement-for-copilot-business-and-enterprise) `Improvement` `copilot`
 - **2026-07-28** — [GitHub Copilot app usage metrics now expand across report rollups](https://github.blog/changelog/2026-07-28-github-copilot-app-usage-metrics-now-expand-across-report-rollups) `Improvement` `account management` `copilot`
@@ -100,12 +106,6 @@ _Last checked: 2026-08-03T09:32:44+00:00 (auto-updated weekly)_
 - **2026-07-08** — [Deploy managed Copilot settings via MDM in VS Code and CLI](https://github.blog/changelog/2026-07-08-deploy-managed-copilot-settings-via-mdm-in-vs-code-and-cli) `Release` `client apps` `copilot`
 - **2026-07-08** — [Add review cycles and time to adoption phases in the usage API](https://github.blog/changelog/2026-07-07-add-review-cycles-and-time-to-adoption-phases-in-the-usage-api) `Improvement` `account management` `copilot`
 - **2026-07-08** — [Kimi K2.7 now available for Copilot Business and Enterprise](https://github.blog/changelog/2026-07-07-kimi-k2-7-now-available-for-copilot-business-and-enterprise) `Release` `copilot`
-- **2026-07-07** — [Per-user budgets for cost centers in the billing UI](https://github.blog/changelog/2026-07-07-per-user-budgets-for-cost-centers-in-the-billing-ui) `Improvement` `copilot` `enterprise management tools`
-- **2026-07-02** — [Improved accuracy and coverage in Copilot usage metrics reports](https://github.blog/changelog/2026-07-02-improved-accuracy-and-coverage-in-copilot-usage-metrics-reports) `Improvement` `account management` `copilot`
-- **2026-07-02** — [Copilot agent session streaming is now in public preview](https://github.blog/changelog/2026-07-02-copilot-agent-session-streaming-is-now-in-public-preview) `Improvement` `copilot` `enterprise management tools`
-- **2026-07-02** — [Cost centers now support AI credit pools](https://github.blog/changelog/2026-07-02-cost-centers-now-support-included-usage-caps) `Release` `account management` `copilot`
-- **2026-07-01** — [Enterprises can default to auto model selection](https://github.blog/changelog/2026-07-01-enterprises-can-default-to-auto-model-selection) `Improvement` `client apps` `copilot`
-- **2026-07-01** — [Enterprise managed-settings.json is generally available](https://github.blog/changelog/2026-07-01-enterprise-managed-settings-json-is-generally-available) `Release` `client apps` `copilot`
 <!-- CHANGELOG:END -->
 
 ## ☁️ Deployments

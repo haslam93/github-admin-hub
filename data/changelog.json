@@ -1,6 +1,72 @@
 {
-  "updated": "2026-08-03T09:32:44+00:00",
+  "updated": "2026-08-10T07:20:15+00:00",
   "entries": [
+    {
+      "title": "Enterprises can now install third-party GitHub Apps",
+      "url": "https://github.blog/changelog/2026-08-07-enterprises-can-now-install-third-party-github-apps",
+      "date": "2026-08-07",
+      "summary": "Enterprise owners can now install public GitHub Apps created outside their enterprise on their enterprise account. This allows third-party integrators to build apps for enterprise management scenarios. Enterprise installations grant&#8230; The post Enterprises can now install third-party GitHub Apps appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "ecosystem &amp; accessibility",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Copilot impact dashboard adds a return on investment section",
+      "url": "https://github.blog/changelog/2026-08-07-copilot-impact-dashboard-adds-a-return-on-investment-section",
+      "date": "2026-08-07",
+      "summary": "The Copilot impact dashboard now includes a &#8220;Potential return on investment&#8221; section that connects what you spend on Copilot to the pull request output you get back. What&#8217;s new Two&#8230; The post Copilot impact dashboard adds a return on investment section appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Copilot usage metrics API adds agent app activity",
+      "url": "https://github.blog/changelog/2026-08-07-copilot-usage-metrics-api-adds-agent-app-activity",
+      "date": "2026-08-07",
+      "summary": "Since agent apps arrived on GitHub, teams have been able to run agents from partners like Claude and Codex directly in their GitHub workflows. The Copilot usage metrics API now&#8230; The post Copilot usage metrics API adds agent app activity appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "MCP allowlists in enterprise managed settings",
+      "url": "https://github.blog/changelog/2026-08-06-mcp-allowlists-in-enterprise-managed-settings",
+      "date": "2026-08-07",
+      "summary": "Enterprise owners can now centrally control which Model Context Protocol (MCP) servers GitHub Copilot clients are allowed to run by using the new allowedMcpServers and deniedMcpServers keys in enterprise managed&#8230; The post MCP allowlists in enterprise managed settings appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "copilot"
+      ]
+    },
+    {
+      "title": "Kimi K3 is now available in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot",
+      "date": "2026-08-06",
+      "summary": "Editor&#8217;s note (August 6, 2026): We have resumed rolling out Kimi K3 in GitHub Copilot. This model is billed at provider list pricing under usage-based billing. See GitHub Copilot&#8217;s pricing&#8230; The post Kimi K3 is now available in GitHub Copilot appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "copilot"
+      ]
+    },
+    {
+      "title": "Retiring the Copilot Billing Preview app",
+      "url": "https://github.blog/changelog/2026-08-04-retiring-the-copilot-billing-preview-app",
+      "date": "2026-08-04",
+      "summary": "We&#8217;ve retired the GitHub Copilot Billing Preview app, and it&#8217;s no longer available. You can review and manage your Copilot spend directly in your GitHub billing settings. The app helped&#8230; The post Retiring the Copilot Billing Preview app appeared first on The GitHub Blog .",
+      "labels": [
+        "Retired",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
     {
       "title": "Enterprise teams model policy targeting in public preview",
       "url": "https://github.blog/changelog/2026-07-31-enterprise-teams-model-policy-targeting-in-public-preview",
