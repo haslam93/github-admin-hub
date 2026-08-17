@@ -1,6 +1,28 @@
 {
-  "updated": "2026-08-10T07:20:15+00:00",
+  "updated": "2026-08-17T06:41:03+00:00",
   "entries": [
+    {
+      "title": "Copilot memory and Ollama in GitHub Copilot for JetBrains",
+      "url": "https://github.blog/changelog/2026-08-11-copilot-memory-and-ollama-in-github-copilot-for-jetbrains",
+      "date": "2026-08-11",
+      "summary": "This update brings persistent memory, local model access, and more enterprise controls to GitHub Copilot for JetBrains. It also improves everyday chat workflows and resolves reliability issues across MCP servers,&#8230; The post Copilot memory and Ollama in GitHub Copilot for JetBrains appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Per-model token breakdown in the usage report",
+      "url": "https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report",
+      "date": "2026-08-11",
+      "summary": "You can now see a per-model breakdown of the tokens behind your AI credits in the usage report. For each model, the AI usage report shows the input, output, cache&#8230; The post Per-model token breakdown in the usage report appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "account management",
+        "copilot"
+      ]
+    },
     {
       "title": "Enterprises can now install third-party GitHub Apps",
       "url": "https://github.blog/changelog/2026-08-07-enterprises-can-now-install-third-party-github-apps",
