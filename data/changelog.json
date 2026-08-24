@@ -1,6 +1,28 @@
 {
-  "updated": "2026-08-17T06:41:03+00:00",
+  "updated": "2026-08-24T06:43:55+00:00",
   "entries": [
+    {
+      "title": "Separate GitHub Actions path for GitHub Code Quality",
+      "url": "https://github.blog/changelog/2026-08-20-separate-github-actions-path-for-github-code-quality",
+      "date": "2026-08-20",
+      "summary": "A dedicated workflow path for code quality CodeQL actions workflows is now generally available. Your workflow run history and your Actions usage reports now tell GitHub Code Quality runs apart&#8230; The post Separate GitHub Actions path for GitHub Code Quality appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "actions",
+        "application security"
+      ]
+    },
+    {
+      "title": "Enterprise managed settings in GitHub Copilot for JetBrains",
+      "url": "https://github.blog/changelog/2026-08-18-enterprise-managed-settings-in-github-copilot-for-jetbrains",
+      "date": "2026-08-18",
+      "summary": "GitHub Copilot for JetBrains now supports enterprise managed settings for plugin governance, MCP server access, OpenTelemetry, and permission modes. Administrators can now apply consistent controls for everyone on your enterprise&#8217;s&#8230; The post Enterprise managed settings in GitHub Copilot for JetBrains appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
     {
       "title": "Copilot memory and Ollama in GitHub Copilot for JetBrains",
       "url": "https://github.blog/changelog/2026-08-11-copilot-memory-and-ollama-in-github-copilot-for-jetbrains",

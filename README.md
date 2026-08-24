@@ -84,8 +84,10 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-08-17T06:41:03+00:00 (auto-updated weekly)_
+_Last checked: 2026-08-24T06:43:55+00:00 (auto-updated weekly)_
 
+- **2026-08-20** — [Separate GitHub Actions path for GitHub Code Quality](https://github.blog/changelog/2026-08-20-separate-github-actions-path-for-github-code-quality) `Improvement` `actions` `application security`
+- **2026-08-18** — [Enterprise managed settings in GitHub Copilot for JetBrains](https://github.blog/changelog/2026-08-18-enterprise-managed-settings-in-github-copilot-for-jetbrains) `Release` `copilot` `enterprise management tools`
 - **2026-08-11** — [Copilot memory and Ollama in GitHub Copilot for JetBrains](https://github.blog/changelog/2026-08-11-copilot-memory-and-ollama-in-github-copilot-for-jetbrains) `Release` `copilot` `enterprise management tools`
 - **2026-08-11** — [Per-model token breakdown in the usage report](https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report) `Improvement` `account management` `copilot`
 - **2026-08-07** — [Enterprises can now install third-party GitHub Apps](https://github.blog/changelog/2026-08-07-enterprises-can-now-install-third-party-github-apps) `Improvement` `ecosystem &amp; accessibility` `enterprise management tools`
@@ -104,8 +106,6 @@ _Last checked: 2026-08-17T06:41:03+00:00 (auto-updated weekly)_
 - **2026-07-17** — [Repository-level GitHub Copilot usage metrics generally available](https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available) `Release` `account management` `copilot`
 - **2026-07-17** — [GitHub Copilot app now available in the usage metrics API](https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api) `Improvement` `account management` `copilot`
 - **2026-07-10** — [Per-user states for multi-user budgets in the REST API](https://github.blog/changelog/2026-07-10-per-user-states-for-multi-user-budgets-in-the-rest-api) `Release` `account management` `enterprise management tools`
-- **2026-07-08** — [Enterprise-managed OpenTelemetry export for VS Code and CLI](https://github.blog/changelog/2026-07-08-enterprise-managed-opentelemetry-export-for-vs-code-and-cli) `Release` `client apps` `copilot`
-- **2026-07-08** — [Deploy managed Copilot settings via MDM in VS Code and CLI](https://github.blog/changelog/2026-07-08-deploy-managed-copilot-settings-via-mdm-in-vs-code-and-cli) `Release` `client apps` `copilot`
 <!-- CHANGELOG:END -->
 
 ## ☁️ Deployments
