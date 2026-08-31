@@ -1,6 +1,39 @@
 {
-  "updated": "2026-08-24T06:43:55+00:00",
+  "updated": "2026-08-31T12:26:37+00:00",
   "entries": [
+    {
+      "title": "Upcoming changes to GitHub Copilot policies and billing",
+      "url": "https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing",
+      "date": "2026-08-28",
+      "summary": "To provide a strong, consistent Copilot experience, we&#8217;re making three separate, upcoming changes to Copilot policies and billing. Please review the upcoming updates to understand what may impact you. Reopening&#8230; The post Upcoming changes to GitHub Copilot policies and billing appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "copilot"
+      ]
+    },
+    {
+      "title": "Enterprise-managed settings now support autoUpdate for plugin marketplaces",
+      "url": "https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces",
+      "date": "2026-08-27",
+      "summary": "You can now opt individual plugin marketplaces into automatic updates by setting autoUpdate: true on an extraKnownMarketplaces entry in enterprise managed settings. Supported clients automatically check the marketplace and update&#8230; The post Enterprise-managed settings now support autoUpdate for plugin marketplaces appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "client apps",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Global model policy generally available",
+      "url": "https://github.blog/changelog/2026-08-26-global-model-policy-generally-available",
+      "date": "2026-08-26",
+      "summary": "In July, we announced a default model policy for generally available GitHub Copilot models on Copilot Business and Copilot Enterprise plans. Starting today, we&#8217;re gradually rolling out enforcement of the&#8230; The post Global model policy generally available appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
     {
       "title": "Separate GitHub Actions path for GitHub Code Quality",
       "url": "https://github.blog/changelog/2026-08-20-separate-github-actions-path-for-github-code-quality",

@@ -84,8 +84,11 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-08-24T06:43:55+00:00 (auto-updated weekly)_
+_Last checked: 2026-08-31T12:26:37+00:00 (auto-updated weekly)_
 
+- **2026-08-28** — [Upcoming changes to GitHub Copilot policies and billing](https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing) `Improvement` `copilot`
+- **2026-08-27** — [Enterprise-managed settings now support autoUpdate for plugin marketplaces](https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces) `Improvement` `client apps` `copilot`
+- **2026-08-26** — [Global model policy generally available](https://github.blog/changelog/2026-08-26-global-model-policy-generally-available) `Improvement` `copilot` `enterprise management tools`
 - **2026-08-20** — [Separate GitHub Actions path for GitHub Code Quality](https://github.blog/changelog/2026-08-20-separate-github-actions-path-for-github-code-quality) `Improvement` `actions` `application security`
 - **2026-08-18** — [Enterprise managed settings in GitHub Copilot for JetBrains](https://github.blog/changelog/2026-08-18-enterprise-managed-settings-in-github-copilot-for-jetbrains) `Release` `copilot` `enterprise management tools`
 - **2026-08-11** — [Copilot memory and Ollama in GitHub Copilot for JetBrains](https://github.blog/changelog/2026-08-11-copilot-memory-and-ollama-in-github-copilot-for-jetbrains) `Release` `copilot` `enterprise management tools`
@@ -103,9 +106,6 @@ _Last checked: 2026-08-24T06:43:55+00:00 (auto-updated weekly)_
 - **2026-07-22** — [New Copilot usage metrics impact dashboard](https://github.blog/changelog/2026-07-22-new-copilot-usage-metrics-impact-dashboard) `Release` `account management` `copilot`
 - **2026-07-20** — [AI credit pools for cost centers in the billing UI](https://github.blog/changelog/2026-07-20-ai-credit-pools-for-cost-centers-in-the-billing-ui) `Improvement` `copilot` `enterprise management tools`
 - **2026-07-20** — [Copilot users can now see AI credits used per billing cycle](https://github.blog/changelog/2026-07-20-copilot-users-can-now-see-ai-credits-used-per-billing-cycle) `Improvement` `account management` `copilot`
-- **2026-07-17** — [Repository-level GitHub Copilot usage metrics generally available](https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available) `Release` `account management` `copilot`
-- **2026-07-17** — [GitHub Copilot app now available in the usage metrics API](https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api) `Improvement` `account management` `copilot`
-- **2026-07-10** — [Per-user states for multi-user budgets in the REST API](https://github.blog/changelog/2026-07-10-per-user-states-for-multi-user-budgets-in-the-rest-api) `Release` `account management` `enterprise management tools`
 <!-- CHANGELOG:END -->
 
 ## ☁️ Deployments
