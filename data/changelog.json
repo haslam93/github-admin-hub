@@ -1,6 +1,40 @@
 {
-  "updated": "2026-08-31T12:26:37+00:00",
+  "updated": "2026-09-07T11:21:09+00:00",
   "entries": [
+    {
+      "title": "Reopening Copilot Business and Enterprise signups",
+      "url": "https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups",
+      "date": "2026-09-03",
+      "summary": "We&#8217;re gradually reopening sign-ups for Copilot Business and Copilot Enterprise customers paying by credit card or PayPal over the next couple of weeks. If you&#8217;ve been waiting to get started&#8230; The post Reopening Copilot Business and Enterprise signups appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "account management",
+        "copilot"
+      ]
+    },
+    {
+      "title": "Enterprise-managed settings support any default model",
+      "url": "https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model",
+      "date": "2026-09-02",
+      "summary": "You can now set your preferred GitHub Copilot model as the default for new conversations through enterprise-managed settings. This lets you choose the default model that best fits your workflows.&#8230; The post Enterprise-managed settings support any default model appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "client apps",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Set an expiration date for individual user budgets",
+      "url": "https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets",
+      "date": "2026-09-01",
+      "summary": "You can now set an optional expiration date on an individual user budget, and GitHub removes the budget on that date. This capability is generally available. The user then falls&#8230; The post Set an expiration date for individual user budgets appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
     {
       "title": "Upcoming changes to GitHub Copilot policies and billing",
       "url": "https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing",

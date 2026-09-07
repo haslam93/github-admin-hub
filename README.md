@@ -84,8 +84,11 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-08-31T12:26:37+00:00 (auto-updated weekly)_
+_Last checked: 2026-09-07T11:21:09+00:00 (auto-updated weekly)_
 
+- **2026-09-03** — [Reopening Copilot Business and Enterprise signups](https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups) `Release` `account management` `copilot`
+- **2026-09-02** — [Enterprise-managed settings support any default model](https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model) `Improvement` `client apps` `copilot`
+- **2026-09-01** — [Set an expiration date for individual user budgets](https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets) `Improvement` `copilot` `enterprise management tools`
 - **2026-08-28** — [Upcoming changes to GitHub Copilot policies and billing](https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing) `Improvement` `copilot`
 - **2026-08-27** — [Enterprise-managed settings now support autoUpdate for plugin marketplaces](https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces) `Improvement` `client apps` `copilot`
 - **2026-08-26** — [Global model policy generally available](https://github.blog/changelog/2026-08-26-global-model-policy-generally-available) `Improvement` `copilot` `enterprise management tools`
@@ -103,9 +106,6 @@ _Last checked: 2026-08-31T12:26:37+00:00 (auto-updated weekly)_
 - **2026-07-29** — [Default model enablement for Copilot Business and Enterprise](https://github.blog/changelog/2026-07-29-default-model-enablement-for-copilot-business-and-enterprise) `Improvement` `copilot`
 - **2026-07-28** — [GitHub Copilot app usage metrics now expand across report rollups](https://github.blog/changelog/2026-07-28-github-copilot-app-usage-metrics-now-expand-across-report-rollups) `Improvement` `account management` `copilot`
 - **2026-07-28** — [GitHub Copilot for JetBrains adds improved OpenTelemetry configuration and model management](https://github.blog/changelog/2026-07-27-github-copilot-for-jetbrains-adds-improvved-opentelemetry-configuration-and-model-management) `Release` `copilot` `enterprise management tools`
-- **2026-07-22** — [New Copilot usage metrics impact dashboard](https://github.blog/changelog/2026-07-22-new-copilot-usage-metrics-impact-dashboard) `Release` `account management` `copilot`
-- **2026-07-20** — [AI credit pools for cost centers in the billing UI](https://github.blog/changelog/2026-07-20-ai-credit-pools-for-cost-centers-in-the-billing-ui) `Improvement` `copilot` `enterprise management tools`
-- **2026-07-20** — [Copilot users can now see AI credits used per billing cycle](https://github.blog/changelog/2026-07-20-copilot-users-can-now-see-ai-credits-used-per-billing-cycle) `Improvement` `account management` `copilot`
 <!-- CHANGELOG:END -->
 
 ## ☁️ Deployments
