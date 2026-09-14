@@ -84,8 +84,11 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-09-07T11:21:09+00:00 (auto-updated weekly)_
+_Last checked: 2026-09-14T11:30:52+00:00 (auto-updated weekly)_
 
+- **2026-09-11** — [Add VS Code Agents to Copilot usage metrics](https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics) `Improvement` `account management` `copilot`
+- **2026-09-09** — [Enterprise managed permissions for GitHub Copilot agent operations](https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations) `Improvement` `client apps` `copilot`
+- **2026-09-09** — [Enterprise-managed sandbox in Copilot for JetBrains](https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains) `Release` `copilot` `enterprise management tools`
 - **2026-09-03** — [Reopening Copilot Business and Enterprise signups](https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups) `Release` `account management` `copilot`
 - **2026-09-02** — [Enterprise-managed settings support any default model](https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model) `Improvement` `client apps` `copilot`
 - **2026-09-01** — [Set an expiration date for individual user budgets](https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets) `Improvement` `copilot` `enterprise management tools`
@@ -103,9 +106,6 @@ _Last checked: 2026-09-07T11:21:09+00:00 (auto-updated weekly)_
 - **2026-08-06** — [Kimi K3 is now available in GitHub Copilot](https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot) `Release` `copilot`
 - **2026-08-04** — [Retiring the Copilot Billing Preview app](https://github.blog/changelog/2026-08-04-retiring-the-copilot-billing-preview-app) `Retired` `copilot` `enterprise management tools`
 - **2026-07-31** — [Enterprise teams model policy targeting in public preview](https://github.blog/changelog/2026-07-31-enterprise-teams-model-policy-targeting-in-public-preview) `Improvement` `copilot` `enterprise management tools`
-- **2026-07-29** — [Default model enablement for Copilot Business and Enterprise](https://github.blog/changelog/2026-07-29-default-model-enablement-for-copilot-business-and-enterprise) `Improvement` `copilot`
-- **2026-07-28** — [GitHub Copilot app usage metrics now expand across report rollups](https://github.blog/changelog/2026-07-28-github-copilot-app-usage-metrics-now-expand-across-report-rollups) `Improvement` `account management` `copilot`
-- **2026-07-28** — [GitHub Copilot for JetBrains adds improved OpenTelemetry configuration and model management](https://github.blog/changelog/2026-07-27-github-copilot-for-jetbrains-adds-improvved-opentelemetry-configuration-and-model-management) `Release` `copilot` `enterprise management tools`
 <!-- CHANGELOG:END -->
 
 ## ☁️ Deployments

@@ -1,6 +1,41 @@
 {
-  "updated": "2026-09-07T11:21:09+00:00",
+  "updated": "2026-09-14T11:30:52+00:00",
   "entries": [
+    {
+      "title": "Add VS Code Agents to Copilot usage metrics",
+      "url": "https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics",
+      "date": "2026-09-11",
+      "summary": "GitHub Copilot usage metrics reports now include generally available metrics for activity in the dedicated VS Code Agents window, helping you measure adoption and engagement across enterprises and organizations. What&#8217;s&#8230; The post Add VS Code Agents to Copilot usage metrics appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Enterprise managed permissions for GitHub Copilot agent operations",
+      "url": "https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations",
+      "date": "2026-09-09",
+      "summary": "If you administer GitHub Copilot Business or GitHub Copilot Enterprise, you can now centrally control which agent operations are blocked, require human approval, or can proceed without a prompt. Managed&#8230; The post Enterprise managed permissions for GitHub Copilot agent operations appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "client apps",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Enterprise-managed sandbox in Copilot for JetBrains",
+      "url": "https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains",
+      "date": "2026-09-09",
+      "summary": "This update brings support for enterprise-managed sandbox policies, cross-file cursor jumps for next edit suggestions, global project context in chat, enterprise policy diagnostics, and a new connection between terminal Copilot&#8230; The post Enterprise-managed sandbox in Copilot for JetBrains appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
     {
       "title": "Reopening Copilot Business and Enterprise signups",
       "url": "https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups",
