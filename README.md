@@ -84,8 +84,12 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-09-14T11:30:52+00:00 (auto-updated weekly)_
+_Last checked: 2026-09-21T11:44:46+00:00 (auto-updated weekly)_
 
+- **2026-09-17** — [Copilot impact dashboard now shows feature engagement](https://github.blog/changelog/2026-09-17-copilot-impact-dashboard-now-shows-feature-engagement) `Improvement` `account management` `copilot`
+- **2026-09-17** — [Agentic CLI customizations now in the usage metrics API](https://github.blog/changelog/2026-09-17-agentic-cli-customizations-now-in-the-usage-metrics-api) `Improvement` `account management` `copilot`
+- **2026-09-16** — [Copilot budget increase requests are generally available](https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available) `Release` `copilot`
+- **2026-09-15** — [GitHub Copilot suggests custom properties definitions](https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions) `Release` `copilot` `platform governance`
 - **2026-09-11** — [Add VS Code Agents to Copilot usage metrics](https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics) `Improvement` `account management` `copilot`
 - **2026-09-09** — [Enterprise managed permissions for GitHub Copilot agent operations](https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations) `Improvement` `client apps` `copilot`
 - **2026-09-09** — [Enterprise-managed sandbox in Copilot for JetBrains](https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains) `Release` `copilot` `enterprise management tools`
@@ -102,10 +106,6 @@ _Last checked: 2026-09-14T11:30:52+00:00 (auto-updated weekly)_
 - **2026-08-07** — [Enterprises can now install third-party GitHub Apps](https://github.blog/changelog/2026-08-07-enterprises-can-now-install-third-party-github-apps) `Improvement` `ecosystem &amp; accessibility` `enterprise management tools`
 - **2026-08-07** — [Copilot impact dashboard adds a return on investment section](https://github.blog/changelog/2026-08-07-copilot-impact-dashboard-adds-a-return-on-investment-section) `Improvement` `account management` `copilot`
 - **2026-08-07** — [Copilot usage metrics API adds agent app activity](https://github.blog/changelog/2026-08-07-copilot-usage-metrics-api-adds-agent-app-activity) `Improvement` `account management` `copilot`
-- **2026-08-07** — [MCP allowlists in enterprise managed settings](https://github.blog/changelog/2026-08-06-mcp-allowlists-in-enterprise-managed-settings) `Release` `copilot`
-- **2026-08-06** — [Kimi K3 is now available in GitHub Copilot](https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot) `Release` `copilot`
-- **2026-08-04** — [Retiring the Copilot Billing Preview app](https://github.blog/changelog/2026-08-04-retiring-the-copilot-billing-preview-app) `Retired` `copilot` `enterprise management tools`
-- **2026-07-31** — [Enterprise teams model policy targeting in public preview](https://github.blog/changelog/2026-07-31-enterprise-teams-model-policy-targeting-in-public-preview) `Improvement` `copilot` `enterprise management tools`
 <!-- CHANGELOG:END -->
 
 ## ☁️ Deployments
