@@ -84,8 +84,11 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-09-21T11:44:46+00:00 (auto-updated weekly)_
+_Last checked: 2026-09-28T12:40:10+00:00 (auto-updated weekly)_
 
+- **2026-09-25** — [Enterprise managed settings in-product validator](https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator) `Improvement` `copilot` `enterprise management tools`
+- **2026-09-25** — [Usage metrics API adds pull request review stages](https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages) `Improvement` `account management` `copilot`
+- **2026-09-25** — [Default Enablement of Copilot features for Copilot Business and Enterprise](https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise) `Improvement` `copilot` `enterprise management tools`
 - **2026-09-17** — [Copilot impact dashboard now shows feature engagement](https://github.blog/changelog/2026-09-17-copilot-impact-dashboard-now-shows-feature-engagement) `Improvement` `account management` `copilot`
 - **2026-09-17** — [Agentic CLI customizations now in the usage metrics API](https://github.blog/changelog/2026-09-17-agentic-cli-customizations-now-in-the-usage-metrics-api) `Improvement` `account management` `copilot`
 - **2026-09-16** — [Copilot budget increase requests are generally available](https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available) `Release` `copilot`
@@ -103,9 +106,6 @@ _Last checked: 2026-09-21T11:44:46+00:00 (auto-updated weekly)_
 - **2026-08-18** — [Enterprise managed settings in GitHub Copilot for JetBrains](https://github.blog/changelog/2026-08-18-enterprise-managed-settings-in-github-copilot-for-jetbrains) `Release` `copilot` `enterprise management tools`
 - **2026-08-11** — [Copilot memory and Ollama in GitHub Copilot for JetBrains](https://github.blog/changelog/2026-08-11-copilot-memory-and-ollama-in-github-copilot-for-jetbrains) `Release` `copilot` `enterprise management tools`
 - **2026-08-11** — [Per-model token breakdown in the usage report](https://github.blog/changelog/2026-08-11-per-model-token-breakdown-in-the-usage-report) `Improvement` `account management` `copilot`
-- **2026-08-07** — [Enterprises can now install third-party GitHub Apps](https://github.blog/changelog/2026-08-07-enterprises-can-now-install-third-party-github-apps) `Improvement` `ecosystem &amp; accessibility` `enterprise management tools`
-- **2026-08-07** — [Copilot impact dashboard adds a return on investment section](https://github.blog/changelog/2026-08-07-copilot-impact-dashboard-adds-a-return-on-investment-section) `Improvement` `account management` `copilot`
-- **2026-08-07** — [Copilot usage metrics API adds agent app activity](https://github.blog/changelog/2026-08-07-copilot-usage-metrics-api-adds-agent-app-activity) `Improvement` `account management` `copilot`
 <!-- CHANGELOG:END -->
 
 ## ☁️ Deployments

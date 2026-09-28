@@ -1,6 +1,40 @@
 {
-  "updated": "2026-09-21T11:44:46+00:00",
+  "updated": "2026-09-28T12:40:10+00:00",
   "entries": [
+    {
+      "title": "Enterprise managed settings in-product validator",
+      "url": "https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator",
+      "date": "2026-09-25",
+      "summary": "You can now use an in-product validator for enterprise managed settings for GitHub Copilot. The validator detects malformed JSON, unsupported configurations, invalid team mappings, and other errors that can prevent&#8230; The post Enterprise managed settings in-product validator appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Usage metrics API adds pull request review stages",
+      "url": "https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages",
+      "date": "2026-09-25",
+      "summary": "The enterprise and organization repository-level Copilot usage metrics reports now break down how long pull requests spend in each stage of review. A new pull_request_review_times array on each repos-1-day row&#8230; The post Usage metrics API adds pull request review stages appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Default Enablement of Copilot features for Copilot Business and Enterprise",
+      "url": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
+      "date": "2026-09-25",
+      "summary": "We&#8217;re introducing a new global default policy for generally available GitHub Copilot features and supported client capabilities in enterprise and organization Copilot settings. For the next 28 days, you can&#8230; The post Default Enablement of Copilot features for Copilot Business and Enterprise appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
     {
       "title": "Copilot impact dashboard now shows feature engagement",
       "url": "https://github.blog/changelog/2026-09-17-copilot-impact-dashboard-now-shows-feature-engagement",
