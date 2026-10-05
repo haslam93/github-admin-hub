@@ -84,7 +84,7 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-09-28T12:40:10+00:00 (auto-updated weekly)_
+_Last checked: 2026-10-05T13:20:52+00:00 (auto-updated weekly)_
 
 - **2026-09-25** — [Enterprise managed settings in-product validator](https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator) `Improvement` `copilot` `enterprise management tools`
 - **2026-09-25** — [Usage metrics API adds pull request review stages](https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages) `Improvement` `account management` `copilot`
