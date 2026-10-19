@@ -84,8 +84,10 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-10-12T14:10:33+00:00 (auto-updated weekly)_
+_Last checked: 2026-10-19T11:51:23+00:00 (auto-updated weekly)_
 
+- **2026-10-13** — [Enterprise managed settings enforcement updates](https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates) `Improvement` `client apps` `copilot`
+- **2026-10-12** — [Client telemetry user attribution and configurable capture](https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture) `Improvement` `client apps` `copilot`
 - **2026-10-10** — [New controls and chat improvements in Copilot for JetBrains](https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains) `Release` `copilot` `enterprise management tools`
 - **2026-10-08** — [Copilot code review: New organization billing options and controls](https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls) `Improvement` `copilot`
 - **2026-10-06** — [Update your IDE to restore agent activity in Copilot usage metrics](https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics) `Improvement` `account management` `copilot`
@@ -104,8 +106,6 @@ _Last checked: 2026-10-12T14:10:33+00:00 (auto-updated weekly)_
 - **2026-09-01** — [Set an expiration date for individual user budgets](https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets) `Improvement` `copilot` `enterprise management tools`
 - **2026-08-28** — [Upcoming changes to GitHub Copilot policies and billing](https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing) `Improvement` `copilot`
 - **2026-08-27** — [Enterprise-managed settings now support autoUpdate for plugin marketplaces](https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces) `Improvement` `client apps` `copilot`
-- **2026-08-26** — [Global model policy generally available](https://github.blog/changelog/2026-08-26-global-model-policy-generally-available) `Improvement` `copilot` `enterprise management tools`
-- **2026-08-20** — [Separate GitHub Actions path for GitHub Code Quality](https://github.blog/changelog/2026-08-20-separate-github-actions-path-for-github-code-quality) `Improvement` `actions` `application security`
 <!-- CHANGELOG:END -->
 
 ## ☁️ Deployments

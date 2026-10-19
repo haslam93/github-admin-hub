@@ -1,6 +1,30 @@
 {
-  "updated": "2026-10-12T14:10:33+00:00",
+  "updated": "2026-10-19T11:51:23+00:00",
   "entries": [
+    {
+      "title": "Enterprise managed settings enforcement updates",
+      "url": "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates",
+      "date": "2026-10-13",
+      "summary": "Enterprise administrators can now require supported GitHub Copilot clients to retrieve current server-managed settings at startup instead of relying on a cached policy. We are also adding minimum client version&#8230; The post Enterprise managed settings enforcement updates appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "client apps",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Client telemetry user attribution and configurable capture",
+      "url": "https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture",
+      "date": "2026-10-12",
+      "summary": "Enterprise administrators can now use telemetry in managed settings to attribute GitHub Copilot activity to a user without collecting their prompts, responses, or tool content. The telemetry.capture.identity setting adds three&#8230; The post Client telemetry user attribution and configurable capture appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "client apps",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
     {
       "title": "New controls and chat improvements in Copilot for JetBrains",
       "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
