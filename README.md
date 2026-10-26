@@ -84,8 +84,14 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-10-19T11:51:23+00:00 (auto-updated weekly)_
+_Last checked: 2026-10-26T12:05:37+00:00 (auto-updated weekly)_
 
+- **2026-10-23** — [Usage metrics API adds usage from tools like OpenCode](https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode) `Improvement` `account management` `copilot`
+- **2026-10-23** — [EMU deletions fix](https://github.blog/changelog/2026-10-23-emu-deletions-fix) `Improvement` `account management`
+- **2026-10-22** — [Custom skills, agents, and MCP servers in usage metrics API](https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api) `Improvement` `account management` `copilot`
+- **2026-10-22** — [Global default for Copilot features generally available](https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available) `Improvement` `copilot` `enterprise management tools`
+- **2026-10-22** — [Industry comparisons in the Copilot impact dashboard](https://github.blog/changelog/2026-10-22-industry-comparisons-in-the-copilot-impact-dashboard) `Improvement` `account management` `copilot`
+- **2026-10-19** — [Copilot model policy API for enterprise, orgs, and teams](https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams) `Improvement` `copilot` `enterprise management tools`
 - **2026-10-13** — [Enterprise managed settings enforcement updates](https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates) `Improvement` `client apps` `copilot`
 - **2026-10-12** — [Client telemetry user attribution and configurable capture](https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture) `Improvement` `client apps` `copilot`
 - **2026-10-10** — [New controls and chat improvements in Copilot for JetBrains](https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains) `Release` `copilot` `enterprise management tools`
@@ -100,12 +106,6 @@ _Last checked: 2026-10-19T11:51:23+00:00 (auto-updated weekly)_
 - **2026-09-15** — [GitHub Copilot suggests custom properties definitions](https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions) `Release` `copilot` `platform governance`
 - **2026-09-11** — [Add VS Code Agents to Copilot usage metrics](https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics) `Improvement` `account management` `copilot`
 - **2026-09-09** — [Enterprise managed permissions for GitHub Copilot agent operations](https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations) `Improvement` `client apps` `copilot`
-- **2026-09-09** — [Enterprise-managed sandbox in Copilot for JetBrains](https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains) `Release` `copilot` `enterprise management tools`
-- **2026-09-03** — [Reopening Copilot Business and Enterprise signups](https://github.blog/changelog/2026-09-03-reopening-copilot-business-and-enterprise-signups) `Release` `account management` `copilot`
-- **2026-09-02** — [Enterprise-managed settings support any default model](https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model) `Improvement` `client apps` `copilot`
-- **2026-09-01** — [Set an expiration date for individual user budgets](https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets) `Improvement` `copilot` `enterprise management tools`
-- **2026-08-28** — [Upcoming changes to GitHub Copilot policies and billing](https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing) `Improvement` `copilot`
-- **2026-08-27** — [Enterprise-managed settings now support autoUpdate for plugin marketplaces](https://github.blog/changelog/2026-08-26-enterprise-managed-settings-now-support-autoupdate-for-plugin-marketplaces) `Improvement` `client apps` `copilot`
 <!-- CHANGELOG:END -->
 
 ## ☁️ Deployments
