@@ -84,8 +84,10 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-10-26T12:05:37+00:00 (auto-updated weekly)_
+_Last checked: 2026-11-02T14:31:19+00:00 (auto-updated weekly)_
 
+- **2026-10-28** — [Route and orchestrate models with GitHub Copilot Fusion](https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion) `Release` `copilot` `enterprise management tools`
+- **2026-10-28** — [GitHub Enterprise now includes access to GitHub Copilot](https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot) `Release` `copilot` `universe26`
 - **2026-10-23** — [Usage metrics API adds usage from tools like OpenCode](https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode) `Improvement` `account management` `copilot`
 - **2026-10-23** — [EMU deletions fix](https://github.blog/changelog/2026-10-23-emu-deletions-fix) `Improvement` `account management`
 - **2026-10-22** — [Custom skills, agents, and MCP servers in usage metrics API](https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api) `Improvement` `account management` `copilot`
@@ -104,8 +106,6 @@ _Last checked: 2026-10-26T12:05:37+00:00 (auto-updated weekly)_
 - **2026-09-17** — [Agentic CLI customizations now in the usage metrics API](https://github.blog/changelog/2026-09-17-agentic-cli-customizations-now-in-the-usage-metrics-api) `Improvement` `account management` `copilot`
 - **2026-09-16** — [Copilot budget increase requests are generally available](https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available) `Release` `copilot`
 - **2026-09-15** — [GitHub Copilot suggests custom properties definitions](https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions) `Release` `copilot` `platform governance`
-- **2026-09-11** — [Add VS Code Agents to Copilot usage metrics](https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics) `Improvement` `account management` `copilot`
-- **2026-09-09** — [Enterprise managed permissions for GitHub Copilot agent operations](https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations) `Improvement` `client apps` `copilot`
 <!-- CHANGELOG:END -->
 
 ## ☁️ Deployments

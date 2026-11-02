@@ -1,6 +1,29 @@
 {
-  "updated": "2026-10-26T12:05:37+00:00",
+  "updated": "2026-11-02T14:31:19+00:00",
   "entries": [
+    {
+      "title": "Route and orchestrate models with GitHub Copilot Fusion",
+      "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion",
+      "date": "2026-10-28",
+      "summary": "GitHub Copilot Fusion is generally available. Instead of picking a model for each task, choose Copilot Fusion and let Copilot intelligently route and orchestrate which models it uses for you.&#8230; The post Route and orchestrate models with GitHub Copilot Fusion appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "copilot",
+        "enterprise management tools",
+        "universe26"
+      ]
+    },
+    {
+      "title": "GitHub Enterprise now includes access to GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot",
+      "date": "2026-10-28",
+      "summary": "Enterprises working with a GitHub or Microsoft account team can now get Copilot included with GitHub Enterprise for every licensed user. Previously, you had to manage two things: how many&#8230; The post GitHub Enterprise now includes access to GitHub Copilot appeared first on The GitHub Blog .",
+      "labels": [
+        "Release",
+        "copilot",
+        "universe26"
+      ]
+    },
     {
       "title": "Usage metrics API adds usage from tools like OpenCode",
       "url": "https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode",
