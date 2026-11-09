@@ -84,8 +84,12 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-11-02T14:31:19+00:00 (auto-updated weekly)_
+_Last checked: 2026-11-09T14:55:46+00:00 (auto-updated weekly)_
 
+- **2026-11-06** — [Copilot impact dashboard adds chat and VS Code agent usage](https://github.blog/changelog/2026-11-06-copilot-impact-dashboard-adds-chat-and-vs-code-agent-usage) `Improvement` `account management` `copilot`
+- **2026-11-06** — [Usage metrics API adds code review details and addressed rate](https://github.blog/changelog/2026-11-05-usage-metrics-api-adds-code-review-details-and-addressed-rate) `Improvement` `account management` `copilot`
+- **2026-11-06** — [Usage metrics API flags telemetry and version gaps](https://github.blog/changelog/2026-11-05-usage-metrics-api-flags-telemetry-and-version-gaps) `Improvement` `account management` `copilot`
+- **2026-11-04** — [BYOK and enterprise custom models in the Copilot usage API](https://github.blog/changelog/2026-11-03-byok-and-enterprise-custom-models-in-the-copilot-usage-api) `Improvement` `account management` `copilot`
 - **2026-10-28** — [Route and orchestrate models with GitHub Copilot Fusion](https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion) `Release` `copilot` `enterprise management tools`
 - **2026-10-28** — [GitHub Enterprise now includes access to GitHub Copilot](https://github.blog/changelog/2026-10-28-github-enterprise-now-includes-access-to-github-copilot) `Release` `copilot` `universe26`
 - **2026-10-23** — [Usage metrics API adds usage from tools like OpenCode](https://github.blog/changelog/2026-10-23-usage-metrics-api-adds-usage-from-tools-like-opencode) `Improvement` `account management` `copilot`
@@ -102,10 +106,6 @@ _Last checked: 2026-11-02T14:31:19+00:00 (auto-updated weekly)_
 - **2026-09-25** — [Enterprise managed settings in-product validator](https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator) `Improvement` `copilot` `enterprise management tools`
 - **2026-09-25** — [Usage metrics API adds pull request review stages](https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages) `Improvement` `account management` `copilot`
 - **2026-09-25** — [Default Enablement of Copilot features for Copilot Business and Enterprise](https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise) `Improvement` `copilot` `enterprise management tools`
-- **2026-09-17** — [Copilot impact dashboard now shows feature engagement](https://github.blog/changelog/2026-09-17-copilot-impact-dashboard-now-shows-feature-engagement) `Improvement` `account management` `copilot`
-- **2026-09-17** — [Agentic CLI customizations now in the usage metrics API](https://github.blog/changelog/2026-09-17-agentic-cli-customizations-now-in-the-usage-metrics-api) `Improvement` `account management` `copilot`
-- **2026-09-16** — [Copilot budget increase requests are generally available](https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available) `Release` `copilot`
-- **2026-09-15** — [GitHub Copilot suggests custom properties definitions](https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions) `Release` `copilot` `platform governance`
 <!-- CHANGELOG:END -->
 
 ## ☁️ Deployments

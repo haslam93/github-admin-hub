@@ -1,6 +1,54 @@
 {
-  "updated": "2026-11-02T14:31:19+00:00",
+  "updated": "2026-11-09T14:55:46+00:00",
   "entries": [
+    {
+      "title": "Copilot impact dashboard adds chat and VS Code agent usage",
+      "url": "https://github.blog/changelog/2026-11-06-copilot-impact-dashboard-adds-chat-and-vs-code-agent-usage",
+      "date": "2026-11-06",
+      "summary": "The Agent adoption chart in the Copilot impact dashboard now includes Copilot Chat and the VS Code Agents window, so you can see engagement across nine Copilot experiences. The adoption&#8230; The post Copilot impact dashboard adds chat and VS Code agent usage appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Usage metrics API adds code review details and addressed rate",
+      "url": "https://github.blog/changelog/2026-11-05-usage-metrics-api-adds-code-review-details-and-addressed-rate",
+      "date": "2026-11-06",
+      "summary": "The enterprise and organization repository-level Copilot usage metrics reports now show what happens to Copilot code review feedback. A new copilot_code_review object on each repos-1-day row reports how many Copilot-reviewed&#8230; The post Usage metrics API adds code review details and addressed rate appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "Usage metrics API flags telemetry and version gaps",
+      "url": "https://github.blog/changelog/2026-11-05-usage-metrics-api-flags-telemetry-and-version-gaps",
+      "date": "2026-11-06",
+      "summary": "The Copilot usage metrics API now shows which users are missing client telemetry or are running IDE or extension versions below the usage metrics minimums. New per-user fields appear in&#8230; The post Usage metrics API flags telemetry and version gaps appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
+    {
+      "title": "BYOK and enterprise custom models in the Copilot usage API",
+      "url": "https://github.blog/changelog/2026-11-03-byok-and-enterprise-custom-models-in-the-copilot-usage-api",
+      "date": "2026-11-04",
+      "summary": "The Copilot usage metrics API now shows bring your own key (BYOK) usage across GitHub Copilot, so you can separate it from Copilot-hosted model usage. Reports cover two kinds of&#8230; The post BYOK and enterprise custom models in the Copilot usage API appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "account management",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
     {
       "title": "Route and orchestrate models with GitHub Copilot Fusion",
       "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion",
