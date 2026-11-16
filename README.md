@@ -84,8 +84,9 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-11-09T14:55:46+00:00 (auto-updated weekly)_
+_Last checked: 2026-11-16T14:31:44+00:00 (auto-updated weekly)_
 
+- **2026-11-11** — [GitHub App support for Enterprise Copilot seat management](https://github.blog/changelog/2026-11-10-github-app-support-for-enterprise-copilot-seat-management) `Improvement` `copilot` `enterprise management tools`
 - **2026-11-06** — [Copilot impact dashboard adds chat and VS Code agent usage](https://github.blog/changelog/2026-11-06-copilot-impact-dashboard-adds-chat-and-vs-code-agent-usage) `Improvement` `account management` `copilot`
 - **2026-11-06** — [Usage metrics API adds code review details and addressed rate](https://github.blog/changelog/2026-11-05-usage-metrics-api-adds-code-review-details-and-addressed-rate) `Improvement` `account management` `copilot`
 - **2026-11-06** — [Usage metrics API flags telemetry and version gaps](https://github.blog/changelog/2026-11-05-usage-metrics-api-flags-telemetry-and-version-gaps) `Improvement` `account management` `copilot`
@@ -105,7 +106,6 @@ _Last checked: 2026-11-09T14:55:46+00:00 (auto-updated weekly)_
 - **2026-10-06** — [Update your IDE to restore agent activity in Copilot usage metrics](https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics) `Improvement` `account management` `copilot`
 - **2026-09-25** — [Enterprise managed settings in-product validator](https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator) `Improvement` `copilot` `enterprise management tools`
 - **2026-09-25** — [Usage metrics API adds pull request review stages](https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages) `Improvement` `account management` `copilot`
-- **2026-09-25** — [Default Enablement of Copilot features for Copilot Business and Enterprise](https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise) `Improvement` `copilot` `enterprise management tools`
 <!-- CHANGELOG:END -->
 
 ## ☁️ Deployments

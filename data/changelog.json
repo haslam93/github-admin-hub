@@ -1,6 +1,17 @@
 {
-  "updated": "2026-11-09T14:55:46+00:00",
+  "updated": "2026-11-16T14:31:44+00:00",
   "entries": [
+    {
+      "title": "GitHub App support for Enterprise Copilot seat management",
+      "url": "https://github.blog/changelog/2026-11-10-github-app-support-for-enterprise-copilot-seat-management",
+      "date": "2026-11-11",
+      "summary": "Enterprise GitHub Apps can now call the enterprise-level Copilot seat management APIs to control which users and enterprise teams are assigned Copilot seats. The Copilot seat management APIs are accessible&#8230; The post GitHub App support for Enterprise Copilot seat management appeared first on The GitHub Blog .",
+      "labels": [
+        "Improvement",
+        "copilot",
+        "enterprise management tools"
+      ]
+    },
     {
       "title": "Copilot impact dashboard adds chat and VS Code agent usage",
       "url": "https://github.blog/changelog/2026-11-06-copilot-impact-dashboard-adds-chat-and-vs-code-agent-usage",
