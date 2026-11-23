@@ -84,7 +84,7 @@ Run it on demand from the **Actions** tab (`workflow_dispatch`).
 
 <!-- CHANGELOG:START -->
 
-_Last checked: 2026-11-16T14:31:44+00:00 (auto-updated weekly)_
+_Last checked: 2026-11-23T17:07:35+00:00 (auto-updated weekly)_
 
 - **2026-11-11** — [GitHub App support for Enterprise Copilot seat management](https://github.blog/changelog/2026-11-10-github-app-support-for-enterprise-copilot-seat-management) `Improvement` `copilot` `enterprise management tools`
 - **2026-11-06** — [Copilot impact dashboard adds chat and VS Code agent usage](https://github.blog/changelog/2026-11-06-copilot-impact-dashboard-adds-chat-and-vs-code-agent-usage) `Improvement` `account management` `copilot`
